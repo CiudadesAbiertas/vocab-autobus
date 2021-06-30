@@ -113,21 +113,9 @@ SELECT ?idParada ?nombreParada ?longParada ?latParada where {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-#5. Dame el orden de la parada 2512 dentro de la ruta 52-ida y las características de esa parada.
-# Grafo http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-extendido
-
+## Consulta 5. Dame el orden de la parada 2512 dentro de la ruta 52-ida y las características de esa parada.
+Se utiliza el grafo http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-extendido
+```
 PREFIX dcterms:<http://purl.org/dc/terms/> 
 PREFIX esautob:<http://vocab.ciudadesabiertas.es/def/transporte/autobus#> 
 PREFIX schema:<http://schema.org/> 
@@ -155,3 +143,4 @@ SELECT  ?orden ?nombreParada ?wifi ?panel ?lat ?long  where {
     	?point geo:long ?long .
     	?point geo:lat ?lat
 }
+```
