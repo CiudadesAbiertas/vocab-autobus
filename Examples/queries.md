@@ -13,6 +13,7 @@ Los grafos de trabajo, con datos de prueba, se encuentran en:
 - http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-extendido
 
 ## Consulta 1 Dame el orden de la parada 4608 dentro de la ruta 138b y las características de esa parada
+Se utiliza el grafo http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-ejemplos
 ```
 PREFIX dcterms:<http://purl.org/dc/terms/> 
 PREFIX esautob:<http://vocab.ciudadesabiertas.es/def/transporte/autobus#> 
@@ -42,6 +43,7 @@ SELECT  ?orden ?nombreParada ?wifi ?panel ?lat ?long  where {
 }
 ```
 ## Consulta 2. Dame los horarios y frecuencias de la ruta 138a Línea 138 con inicio en Cristo Rey y destino en San Ignacio de Loyola.
+Se utiliza el grafo http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-ejemplos
 ```
 PREFIX dcterms:<http://purl.org/dc/terms/> 
 PREFIX esautob:<http://vocab.ciudadesabiertas.es/def/transporte/autobus#> 
@@ -71,6 +73,7 @@ SELECT  ?idViaje ?idGrupoHorario ?primeraHora ?ultimaHora  ?frecuenciaMin ?frecu
 ```
 
 ## Consulta 3 Dame el tipo de día que corresponde al 29 de mayo de 2020 y la información sobre ese tipo de día.
+Se utiliza el grafo http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-ejemplos
 ```
 PREFIX schema:<http://schema.org/> 
 PREFIX tmcommons:<https://w3id.org/transmodel/commons#> 
@@ -92,6 +95,7 @@ select * where {
 ```
 
 ## Consulta 4. ¿Cuáles son las paradas más cercanas a esta localización, en un radio de 500 mts.
+Se utiliza el grafo http://vocab.ciudadesabiertas.es/grafo/transporte/autobus/datos-autobus-extendido
 
 Dada la ubicación en el Museo de América de Madrid (40.438352 -3.721677):
 ```
@@ -106,10 +110,10 @@ SELECT ?idParada ?nombreParada ?longParada ?latParada where {
 	?parada a esautob:Parada .
 	?parada dcterms:identifier ?idParada .
 	OPTIONAL {?parada schema:name ?nombreParada} .
-      	?parada geosparql:hasGeometry ?point .
-     	?point geo:long ?longParada .
-     	?point geo:lat ?latParada .
-       	FILTER (bif:haversine_deg_km(?longParada, ?latParada, "-3.721677"^^xsd:double, "40.438352"^^xsd:double) < 0.5)
+     ?parada geosparql:hasGeometry ?point .
+     ?point geo:long ?longParada .
+     ?point geo:lat ?latParada .
+       FILTER (bif:haversine_deg_km(?longParada, ?latParada, "-3.721677"^^xsd:double, "40.438352"^^xsd:double) < 0.5)
 }
 ```
 
