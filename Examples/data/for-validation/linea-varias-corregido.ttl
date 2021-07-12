@@ -1,0 +1,1767 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esautob: <http://vocab.ciudadesabiertas.es/def/transporte/autobus#> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix estraf: <http://vocab.ciudadesabiertas.es/def/transporte/trafico#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo_core: <https://datos.ign.es/def/geo_core#> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sf: <http://www.opengis.net/ont/sf#> .
+@prefix tmcommons: <https://w3id.org/transmodel/commons#> .
+@prefix tmkoscommons: <http://vocab.linkeddata.es/datosabiertos/kos/transporte/autobus/commons/> .
+@prefix tmkosjourney: <http://vocab.linkeddata.es/datosabiertos/kos/transporte/autobus/journey/> .
+@prefix tmjourney: <https://w3id.org/transmodel/journeys#> .
+@prefix tmorg: <https://w3id.org/transmodel/organisations#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Línea A, 093
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/linea/093> a esautob:Linea ;
+    tmjourney:runBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/operador/emt> ;
+    dcterms:identifier "093"^^xsd:string ;
+    dcterms:description "Línea A, comienzo en Moncloa y final en el Campus de Somosaguas de la Universidad Complutense de Madrid"^^xsd:string ;
+    schema:url "https://www.emtmadrid.es/Bloques-EMT/EMT-BUS/Mi-linea-(1).aspx?linea=138&lang=es-ES"; 
+    schema:name "A"^^xsd:string ;
+    tmjourney:shortName "A"^^xsd:string ;
+    esautob:color "azul"^^xsd:string ;
+    esautob:afectadoPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/123456> ; # inventada
+    esautob:cabeceraLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> ;
+    esautob:finLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/5481> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/093a> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/093b> .
+
+# INCIDENCIA
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/123456> a estraf:Incidencia ;
+    dcterms:identifier "BE0327AF-403B-4830-BFF3-E0BF0D662D5"^^xsd:string ;
+    dcterms:description "El 27 de febrero de 15:15 a 19:30 horas, 22 líneas tendrán retenciones y modificaciones en sus itinerarios por pasacalles y desfiles de carnaval, según su desarrollo y de acuerdo con las restricciones de tráfico que realice Policía Municipal.  Ver más detalle en documento adjunto"^^xsd:string ;
+    dcterms:title "Carnavales: Distritos Carabanchel y Centro. Afectadas 22 líneas de EMT"^^xsd:string ;
+    esautob:incidenciaAdjunto "http://feeds.emtmadrid.es:8082/docs/20200227-Carnavales-Distritos-2020.pdf"^^xsd:anyURI ;
+    schema:dateCreated "2020-02-26T17:10:03.932921"^^xsd:dateTime ;
+    schema:startDate "2020-02-27T15:15:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2020-02-27T19:30:00+02:00"^^xsd:dateTime ;
+    estraf:esRecurrente "false"^^xsd:boolean ;
+    estraf:numSentidos "2"^^xsd:integer ;
+    estraf:numCarriles "2"^^xsd:integer ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4608> ;
+    estraf:incidenciaEnTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Tramo/123456> ;
+    estraf:tipoIncidencia <http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia/evento> .
+    
+
+    <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Tramo/123456> a estraf:Tramo ;
+	estraf:inicioTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Point/123456> ;
+	estraf:finTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Point/123457> .
+
+# Rutas de línea A
+
+## Ruta de ida, de cabecera de línea a final de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/Aa> a tmjourney:Route ;
+    dcterms:identifier "Aa"^^xsd:string ;
+    dcterms:description "Línea A con inicio en Moncloa y destino en el Campus de Somosaguas de la Ciudad Universitaria"^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-4608> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-4022> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-3687> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-737> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-735> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-193> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-173> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-854> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-599> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-601> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-4070> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1452> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1453> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1454> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1457> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-4633> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1459> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1461> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1463> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1465> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1467> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1469> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1471> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1472> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1474> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1476> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1478> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-1484> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-575> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-4505> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-578> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-580> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-582> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-3149> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-653> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-651> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Aa-5481> .
+
+## Ruta de vuelta de la línea A, del final de línea a cabecera de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/Ab> a tmjourney:Route ;
+    dcterms:identifier "Ab"^^xsd:string ;
+    dcterms:description "Línea A con inicio en el Campus de Somosaguas de la Universidad Complutense de Madrid y destino en Moncloa"^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-5481> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-651> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-653> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-3149> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-582> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-580> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-578> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4505> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-575> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1484> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1478> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1476> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1474> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1472> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1471> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1469> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1467> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1465> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1463> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1461> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1459> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4633> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1457> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1454> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1453> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-1452> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4070> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-601> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-599> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-854> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-173> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-193> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-735> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-737> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-3687> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4022> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4608> .
+
+# Llegamos a las paradas. Una parada
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4608> a tmjourney:PointOnRoute ;
+    dcterms:identifier "Ab-4608"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/Ab-4608> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/Ab-4608> a tmjourney:RoutePoint .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/place/4608> a tmjourney:Place, esautob:Parada ;
+    tmjourney:aGenericDescriptionOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4608> .
+
+# Otra parada
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/Ab-4022> a tmjourney:PointOnRoute ;
+    dcterms:identifier "Ab-4022"^^xsd:string ;
+    tmjourney:order "2"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/Ab-4022> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/Ab-4022> a tmjourney:RoutePoint .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/place/4022> a tmjourney:Place, esautob:Parada ;
+    tmjourney:aGenericDescriptionOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4022> .
+
+# etc Paradas
+
+# Journey Patterns
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Aa1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "Aa1"^^xsd:string ;
+    schema:name "Aa1"^^xsd:string ;
+    tmjourney:distance "11.194"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/Aa> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/Aa1> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-4608> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-4022> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-3687> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-737> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-735> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-193> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-173> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-854> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-599> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-601> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-4070> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1452> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1453> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1454> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1457> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-4633> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1459> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1461> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1463> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1465> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1467> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1469> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1471> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1472> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1474> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1476> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1478> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-1484> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-575> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-4505> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-578> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-580> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-582> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-3149> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-653> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-651> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-5481> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Ab1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "Ab1"^^xsd:string ;
+    schema:name "Ab1"^^xsd:string ;
+    tmjourney:distance "11.194"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/Ab> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/Ab1> ; #check
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-4608> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-4022> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-3687> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-737> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-735> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-193> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-173> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-854> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-599> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-601> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-4070> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1452> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1453> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1454> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1457> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-4633> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1459> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1461> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1463> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1465> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1467> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1469> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1471> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1472> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1474> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1476> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1478> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-1484> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-575> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-4505> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-578> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-580> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-582> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-3149> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-653> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-651> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Ab1-5481> .
+
+# Destino visible de cada ruta:
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/Aa1> a tmjourney:DestinationDisplay ;
+    dcterms:id "Aa1" ;
+    tmjourney:frontText "Campus de Somosaguas"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/Ab1> a tmjourney:DestinationDisplay ;
+    dcterms:id "Ab1" ;
+    tmjourney:frontText "Moncloa"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/Aa1-4608> a tmjourney:StopPointInJourneyPattern ;
+    dcterms:identifier "Aa1-4608"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:stopUse <http://w3id.org/transmodel/kos/journeys/stop-use-type/pass-through> ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/scheduledstoppoint/Aa1-4608> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/schedulestoppoint/Aa1-4608> a tmjourney:ScheduledStopPoint ;
+    tmjourney:includedIn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/cristorey> ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> ;
+    tmjourney:forAlighting "false"^^xsd:boolean ;
+    tmjourney:forBoarding "true"^^xsd:boolean .
+    
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/moncloa> a tmjourney:StopArea ;
+    dcterms:id "moncloa"^^xsd:string ;
+    dcterms:name "Moncloa"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/1234> a esautob:Parada ;
+    schema:url "https://emtmadrid.es/paradas/#"^^xsd:anyURI ;
+    dcterms:identifier "1234"^^xsd:string ;
+    dcterms:description "Moncloa"^^xsd:string ;
+    schema:name "Moncloa"^^xsd:string ;
+    esautob:wifi "false"^^xsd:boolean ;
+    esautob:panelElectronico "true"^^xsd:boolean ;
+    esautob:zona "A"^^xsd:string ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4608> ;
+    schema:address <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/moncloa> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/1234> a geosparql:Point ;
+    geo_core:xETRS89 "-2465360,47"^^xsd:float ;
+    geo_core:yETRS89 "5100548,33"^^xsd:float ;
+    #geosparql:asWKT  "POINT (-3.71224 40,42262)"^^geosparql:wktLiteral ;
+    geo:lat "40.43846"^^xsd:float ;
+    geo:long "-3.7179"^^xsd:float .
+
+# Vehicle Journey Aa1 en el JourneyPattern Aa1 (recorrido completo
+# de ida, de cabecera a fin) en la ruta Aa (de cabecera a fin) en la línea A
+
+
+# Dado que la cardinalidad entre VJ y DayType es 1..1 para cada
+# DayType habrá un VJ. Y dado que entre VJ y HeadwayJourneyGroup
+# también es 1..1, y entre HJG y HeadwayInterval también, por cada HI
+# hay un VJ que trabaja en un DT
+
+# VehicleJourneys para Horario de Invierno
+
+
+#Aa1-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/Aa1-laborable> a tmjourney:VehicleJourney ;
+    dcterms:identifier "Aa1-laborable"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Aa1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/A-laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Aa1-laborable> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# Aa1-viernes
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/Aa1-viernes> a tmjourney:VehicleJourney ;
+    dcterms:identifier "Aa1-viernes"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Aa1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/A-laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Aa1-viernes> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# Aa1-sábado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/Aa1-sabado> a tmjourney:VehicleJourney ;
+    dcterms:identifier "Aa1-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Aa1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/A-sabado>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Aa1-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# Ab1-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/Ab1-laborable> a tmjourney:VehicleJourney ;
+    dcterms:identifier "Ab1-laborable"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:48:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Ab1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/A-laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Ab1-laborable> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# Ab1-viernes
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/Ab1-laborable-llano> a tmjourney:VehicleJourney ;
+    dcterms:identifier "Ab1-viernes"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:48:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Ab1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/A-laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Ab1-viernes> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# Ab1-sábado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/Ab1-laborable-valle-fin> a tmjourney:VehicleJourney ;
+    dcterms:identifier "Ab1-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "08:00:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/Ab1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/A-sabado>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Ab1-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# CALENDARIO DE SERVICIO: HORARIO DE INVIERNO
+
+# headwayjourneygroup laborable ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Aa1-laborable> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "Aa1-laborable"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "21:53:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-laborable> .
+
+# headwayjourneygroup laborable vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Ab1-laborable> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "Ab1-laborable"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:48:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "22:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-laborable> .
+
+# headwayinterval laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-laborable> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P2M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P10M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 2 - 10 min."^^xsd:string .
+
+# headwayjourneygroup viernes ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Aa1-viernes> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "Aa1-viernes"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "21:53:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-viernes> .
+
+# headwayjourneygroup viernes vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Ab1-viernes> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "Ab1-viernes"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:48:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "22:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-viernes> .
+
+# headwayinterval viernes
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-viernes> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P3M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P11M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 3 - 11 min."^^xsd:string .
+
+# headwayjourneygroup sabado ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Aa1-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "Aa1-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "14:20:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-sabado> .
+
+# headwayjourneygroup sabado vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/Ab1-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "Ab1-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "08:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "14:40:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-sabado> .
+
+# headwayinterval sabado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/A-sabado> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P9M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P60M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 9 - 60 min."^^xsd:string .
+
+# DayTypes
+
+# Laborables
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable> a tmjourney:DayType ;
+    dcterms:identifier "A-ls"^^xsd:string ;
+    dcterms:description "Horario general para el servicio de EMT en día laborable." ;
+    schema:name "Día laborable"^^xsd:string ;
+    tmcommons:shortName "Laborables"^^xsd:string .
+   # tmjourney:earliestTime "07:30:00"^^xsd:time .
+
+# Sábados
+
+    <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/sabado> a tmjourney:OperatingDay ;
+    dcterms:identifier "sabado"^^xsd:string ;
+    dcterms:identifier "Sábados laborables"^^xsd:string ;
+    schema:name "Sábados laborables"^^xsd:string ;
+    tmcommons:shortName "Sábado laborable"^^xsd:string .
+   # tmjourney:earliestTime "07:30:00"^^xsd:time .
+
+
+# Calendario de servicio mayo 2020
+
+# Horario invierno, todo el año, servicio 100%.
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/2020-mayo> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "2020-mayo"^^xsd:string ;
+    dcterms:description "Horario general para todo el año, salvo verano, Semana Santa y otras fechas excepcionales"^^xsd:string ;
+    schema:name "Horario de invierno, mayo 2020"^^xsd:string ;
+    tmcommons:shortName "Horario mayo 2020"^^xsd:string ; 
+    tmjourney:from "2020-05-01:00:00:01+02:00"^^xsd:dateTime ;
+    tmjourney:to "2020-05-31:23:59:59+02:00"^^xsd:dateTime ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200501-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200502-sabado> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200503-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200504-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200505-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200506-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200507-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200508-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200509-sabado> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200510-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200511-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200512-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200513-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200514-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200515-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200516-sabado> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200517-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200518-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200519-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200520-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200521-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200522-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200523-sabado> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200524-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200525-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200526-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200527-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200528-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200529-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200530-sabado> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200531festivo> .
+    
+# Temporada baja, segunda quincena de julio y primera de
+# septiembre, reducción 20%
+
+# Segunda quincena de julio
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/2020-temporada-baja-julio> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "2020-temporada-baja-julio"^^xsd:string ;
+    dcterms:description "Temporada baja, segunda quincena de julio"^^xsd:string ;
+    schema:name "Horario de temporada baja"^^xsd:string ;
+    tmcommons:shortName "Temporada baja julio"^^xsd:string ; 
+    tmjourney:from "2020-07-15:00:00:01+02:00"^^xsd:dateTime ;
+    tmjourney:to "2020-07-31:23:59:59+02:00"^^xsd:dateTime ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200715> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200716> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200717> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200718> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200719> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200720> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200721> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200722> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200723> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200724> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200725> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200726> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200727> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200728> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200729> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200730> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200731> .
+    
+# Primera quincena septiembre
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/2020-temporada-baja-septiembre> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "2020-temporada-baja-septiembre"^^xsd:string ;
+    dcterms:description "Temporada baja, primera quincena de septiembre"^^xsd:string ;
+    schema:name "Horario de temporada baja"^^xsd:string ;
+    tmcommons:shortName "Horario temporada baja septiembre 2020"^^xsd:string ; 
+    tmjourney:from "2020-09-01:00:00:01+02:00"^^xsd:dateTime ;
+    tmjourney:to "2020-09-15:23:59:59+02:00"^^xsd:dateTime ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200901> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200902> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200903> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200904> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200905> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200906> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200907> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200908> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200909> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200910> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200911> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200912> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200913> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200914> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200915> .
+    
+    
+# Horario de verano, agosto, reducción 40%
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/horario-verano> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "Temporada baja julio"^^xsd:string ;
+    dcterms:description "Temporada baja, segunda quincena de julio"^^xsd:string ;
+    schema:name "Horario de temporada baja de julio 2020"^^xsd:string ;
+    tmcommons:shortName "Horario temporada baja julio 2020"^^xsd:string ; 
+    tmjourney:from "2020-08-01:00:00:01+02:00"^^xsd:dateTime ;
+    tmjourney:to "2020-08-31:23:59:59+02:00"^^xsd:dateTime ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200801> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200802> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200803> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200804> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200805> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200806> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200807> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200808> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200809> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200810> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008011> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008012> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008013> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008014> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008015> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008016> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008017> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008018> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008019> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008020> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008021> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008022> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008023> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008024> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008025> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008026> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008027> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008028> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008029> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008030> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/202008031> .
+    
+
+# Semana Santa, días laborables de Semana Santa, reducción 12%
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/2020-semanasanta> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "Semana santa"^^xsd:string ;
+    dcterms:description "Semana Santa 2020"^^xsd:string ;
+    schema:name "Horario de Semana Santa, un 12% menos"^^xsd:string ;
+    tmcommons:shortName "Horario de Semana Santa 2020"^^xsd:string ;
+    tmjourney:from "2020-04-06:00:00:01+02:00"^^xsd:dateTime ;
+    tmjourney:to "2020-04-08:23:59:59+02:00"^^xsd:dateTime ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200406> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200407> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/20200408> .
+    
+
+# DayTypeAssignment
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200514-laborable> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-05-14"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200529-laborable> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-05-29"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CM-20200530-laborable> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-05-30"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/sabado> .
+
+   
+# Línea 138
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/linea/138> a esautob:Linea ;
+    tmjourney:runBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/operador/emt> ;
+    dcterms:identifier "138"^^xsd:string ;
+    dcterms:description "Línea 138, comienzo en Cristo Rey y final en San Ignacio de Loyola"^^xsd:string ;
+    schema:url "https://www.emtmadrid.es/Bloques-EMT/EMT-BUS/Mi-linea-(1).aspx?linea=138&lang=es-ES"; 
+    schema:name "Línea 138"^^xsd:string ;
+    tmjourney:shortName "138"^^xsd:string ;
+    esautob:color "azul"^^xsd:string ;
+    esautob:afectadaPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/29059944-382A-49AA-A068-B55BF2FAC51F> ;
+    esautob:afectadaPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/51960FE2-42D7-4B2F-88B0-3774B40E1770> ;
+    esautob:afectadaPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/97D969D4-1F48-43B2-AF0B-81DF579C2660> ;
+    esautob:afectadaPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/9583B9E9-A82B-4A47-8F8B-4BAA95B50788> ;
+    esautob:cabeceraLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> ;
+    esautob:finLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/5481> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138a> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138b> .
+
+# INCIDENCIAS
+
+# INCIDENCIA 29059944-382A-49AA-A068-B55BF2FAC51F
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/29059944-382A-49AA-A068-B55BF2FAC51F> a estraf:Incidencia ;
+    dcterms:identifier "29059944-382A-49AA-A068-B55BF2FAC51F"^^xsd:string ;
+    dcterms:description "El 21 de junio de 12:00 a 14:30 horas aproximadamente, las líneas 001,  002,  1,  2,  3,  7,  21,  37,  40,  44,  46,  62,  82,  83,  132,  133,  138,  147,  149,  C1 y C2, tendrán retenciones y modificaciones en sus itinerarios en Génova, plaza Alonso Martínez, Sagasta, glorieta Bilbao, Carranza, glorieta Ruiz Jiménez, Alberto Aguilera, Princesa y plaza Moncloa por manifestación, según su desarrollo y de acuerdo con las restricciones de tráfico que realice la Policía Municipal"^^xsd:string ;
+    dcterms:title "Manifestación Génova - Moncloa 21/06/2020"^^xsd:string ;
+    esautob:incidenciaAdjunto "http://feeds.emtmadrid.es:8082/docs/20200621-Manifestacion-Genova-Moncloa.pdf"^^xsd:anyURI ;
+    schema:dateCreated "2020-06-20T09:30:00+02:00"^^xsd:dateTime ;
+    schema:startDate "2020-06-21T12:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2020-06-21T14:30:00+02:00"^^xsd:dateTime ;
+    estraf:esRecurrente "false"^^xsd:boolean ;
+    estraf:numSentidos "2"^^xsd:integer ;
+    estraf:numCarriles "2"^^xsd:integer ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/point/1865> ;
+    estraf:incidenciaEnTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Tramo/1865> ;
+    estraf:tipoIncidencia <http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia/evento> .
+
+
+# INCIDENCIA 51960FE2-42D7-4B2F-88B0-3774B40E1770
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/51960FE2-42D7-4B2F-88B0-3774B40E1770> a estraf:Incidencia ;
+    dcterms:identifier "51960FE2-42D7-4B2F-88B0-3774B40E1770"^^xsd:string ;
+    dcterms:description "Desde las 10:30 horas del 15 de junio a fin de obras, las líneas 001, 1, 2, 44, 62, 74, 133, 138, C1 y N21, trasladan provisionalmente la parada 1750, ubicada en Princesa 4, a la parada 1451, ubicada en plaza España 19."^^xsd:string ;
+    dcterms:title "Traslado de Parada: Calle Princesa. Afectadas 10 líneas de EMT"^^xsd:string ;
+    esautob:incidenciaAdjunto "http://feeds.emtmadrid.es:8082/docs/20200615-Traslado-Parada-1750-Princesa.pdf"^^xsd:anyURI ;
+    schema:dateCreated "2020-06-20T09:30:00+02:00"^^xsd:dateTime ;
+    schema:startDate "2020-06-21T12:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2020-06-21T14:30:00+02:00"^^xsd:dateTime ;
+    estraf:esRecurrente "false"^^xsd:boolean ;
+    estraf:numSentidos "2"^^xsd:integer ;
+    estraf:numCarriles "2"^^xsd:integer ;
+geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/1750> ;
+    estraf:incidenciaEnTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Tramo/1750> ;
+    estraf:tipoIncidencia <http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia/obras> .
+
+# INCIDENCIA 97D969D4-1F48-43B2-AF0B-81DF579C2660
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/97D969D4-1F48-43B2-AF0B-81DF579C2660> a estraf:Incidencia ;
+    dcterms:identifier "97D969D4-1F48-43B2-AF0B-81DF579C2660"^^xsd:string ;
+    dcterms:description "El 9 de junio, desde las 9:00 horas aproximadamente, las líneas 001, 1, 2, 44, 62, 74, 133, 138, C2 y N21, recuperan definitivamente la parada 173 ubicada en Princesa 15-17, por finalización de obras."^^xsd:string ;
+    dcterms:title "Recuperación de Parada: Princesa. Afectadas 10 líneas de EMT"^^xsd:string ;
+    esautob:incidenciaAdjunto "http://feeds.emtmadrid.es:8082/docs/20200609-Recuperacion-Parada-173-Princesa.pdf"^^xsd:anyURI ;
+    schema:dateCreated "2020-06-08T20:20:00+02:00"^^xsd:dateTime ;
+    schema:startDate "2020-06-09T09:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2020-06-11T19:00:00+02:00"^^xsd:dateTime ;
+    estraf:esRecurrente "false"^^xsd:boolean ;
+    estraf:numSentidos "2"^^xsd:integer ;
+    estraf:numCarriles "2"^^xsd:integer ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/point/173> ;
+    estraf:incidenciaEnTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Tramo/173> ;
+    estraf:tipoIncidencia <http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia/obras> .
+
+# INCIDENCIA 9583B9E9-A82B-4A47-8F8B-4BAA95B50788
+    
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/9583B9E9-A82B-4A47-8F8B-4BAA95B50788> a estraf:Incidencia ;
+    dcterms:identifier "9583B9E9-A82B-4A47-8F8B-4BAA95B50788"^^xsd:string ;
+    dcterms:description "Desde las 9:00 horas del 24 de junio a fin de obras, las líneas 001, 1, 2, 44, 62, 74, 133, 138, C1 y N21, trasladan provisionalmente la parada 172, ubicada en calle Princesa 16, unos 25 metros después en la misma calle hasta el número 1 de la misma calle."^^xsd:string ;
+    dcterms:title "Traslado de Parada: Calle Princesa. Afectadas 10 líneas de EMT."^^xsd:string ;
+    esautob:incidenciaAdjunto "http://feeds.emtmadrid.es:8082/docs/20200621-Manifestacion-Genova-Moncloa.pdf"^^xsd:anyURI ;
+    schema:dateCreated "2020-06-23T13:26:00+02:00"^^xsd:dateTime ;
+    schema:startDate "2020-06-24T19:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2020-07-24T19:30:00+02:00"^^xsd:dateTime ;
+    estraf:esRecurrente "false"^^xsd:boolean ;
+    estraf:numSentidos "2"^^xsd:integer ;
+    estraf:numCarriles "2"^^xsd:integer ;
+    geosparql:hasGeomerty <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/point/172> ;
+    estraf:incidenciaEnTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/172> ;
+    estraf:tipoIncidencia <http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia/obras> .
+
+# Rutas de línea 138
+
+## Ruta de ida, de cabecera de línea a final de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138a> a tmjourney:Route ;
+    dcterms:identifier "138a"^^xsd:string ;
+    dcterms:description "Ruta de ida de la línea 138 con inicio en Cristo Rey y destino en San Ignacio de Loyola"^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/138a-4608> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/138a-5481> .
+
+## Ruta de vuelta de la línea 138, del final de línea a cabecera de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138b> a tmjourney:Route ;
+    dcterms:identifier "138b"^^xsd:string ;
+    dcterms:description "Ruta de vuelta de la línea 138 con inicio en San Ignacio de Loyola y destino en Cristo Rey"^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/138b-5481> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/138b-4608> .
+
+# Point on Route
+
+# Ejemplo de dos pointonroute de la ruta de vuelta 
+
+# 1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/138b-4608> a tmjourney:PointOnRoute ;
+    dcterms:identifier "138b-4608"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/138b-4608> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/138b-4608> a tmjourney:RoutePoint ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> .
+    
+# 2
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/138b-4022> a tmjourney:PointOnRoute ;
+    dcterms:identifier "138b-4022"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/138b-4022> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/138b-4022> a tmjourney:RoutePoint ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4022> .
+
+# Journey Patterns
+
+# JourneyPattern 138a1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138a1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "138a1"^^xsd:string ;
+    schema:name "138a1"^^xsd:string ;
+    tmjourney:distance "11,194"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138a> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/138a1> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138a1-4608> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138a1-5481> .
+
+# JourneyPattern 138b1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "138b1"^^xsd:string ;
+    schema:name "138b1"^^xsd:string ;
+    tmjourney:distance "12,660"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138b> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/138b1> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138b1-5481> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138b1-1750> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138b1-4608> .
+
+# JourneyPattern 138b2
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b2> a tmjourney:JourneyPattern ;
+    dcterms:identifier "138b2"^^xsd:string ;
+    esautob:generadoPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/51960FE2-42D7-4B2F-88B0-3774B40E1770> ;
+    schema:name "138b2"^^xsd:string ;
+    tmjourney:distance "11,194"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/138b> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/138a1> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138b2-4608> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138b2-1451> ;
+    
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138b2-5481> .
+
+
+# Destino visible de cada ruta:
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/138a1> a tmjourney:DestinationDisplay ;
+    dcterms:id "138a1" ;
+    tmjourney:frontText "COLONIA SAN IGNACIO DE LOYOLA"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/138b1> a tmjourney:DestinationDisplay ;
+    dcterms:id "138b1" ;
+    tmjourney:frontText "PLAZA DE CRISTO REY"^^xsd:string .
+
+# StopPointInJourneyPattern
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/138a1-4608> a tmjourney:StopPointInJourneyPattern ;
+    dcterms:identifier "138a1-4608"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:stopUse <http://w3id.org/transmodel/kos/journeys/stop-use-type/pass-through> ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/scheduledstoppoint/138a1-4608> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/schedulestoppoint/138a1-4608> a tmjourney:ScheduledStopPoint ;
+    tmjourney:includedIn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/cristorey> ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> ;
+    tmjourney:forAlighting "false"^^xsd:boolean ;
+    tmjourney:forBoarding "true"^^xsd:boolean .
+    
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/cristorey> a tmjourney:StopArea ;
+    dcterms:id "cristorey"^^xsd:string ;
+    dcterms:name "Cristo Rey"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> a esautob:Parada ;
+    schema:url "https://emtmadrid.es/paradas/#"^^xsd:anyURI ;
+    dcterms:identifier "4608"^^xsd:string ;
+    dcterms:description "Cristo Rey"^^xsd:string ;
+    schema:name "Cristo Rey"^^xsd:string ;
+    esautob:wifi "false"^^xsd:boolean ;
+    esautob:panelElectronico "true"^^xsd:boolean ;
+    esautob:zona "A"^^xsd:string ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4608> ;
+    schema:address <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/cristorey> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4608> a sf:Point ;
+    geo_core:xETRS89 "-3.717985"^^xsd:float ;
+    geo_core:yETRS89 "40.438041"^^xsd:float ;
+    #geosparql:asWKT  "POINT (-3.71224 40,42262)"^^geosparql:wktLiteral ;
+    geo:lat "40.438041"^^xsd:float ;
+    geo:long "-3.717985"^^xsd:float .
+
+# VehicleJourneys
+
+# VehicleJourney 138a1-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138a1-laborable> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138a1-laborable"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "06:15:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138a1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138a1-laborable> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# VehicleJourney 138b1-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138b1-laborable> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138b1"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VehicleJourney 138b2-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138b2-laborable> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138b2"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VehicleJourney 138a1-sabado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138a1-sabado> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138a1-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "06:15:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138a1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138a1-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VehicleJourney 138b1-sábado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138b1-sabado> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138b1-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/138b1-sabado>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VehicleJourney 138b2-sábado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138b2-sabado> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138b2-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/138b2-sabado>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b2-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+#VehicleJourney 138a1-festivo
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138a1-festivo> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138a1-festivo"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138a1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138a1-festivo> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VehicleJourney 138b1-festivo
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138b1-festivo> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138b1-festivo"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:00:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/138b1-festivo>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1-festivo> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VehicleJourney 138b2-festivo
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/138b2-festivo> a tmjourney:VehicleJourney ;
+    dcterms:identifier "138b2-festivo"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/138b2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/138b2-festivo>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b2-festivo> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+
+#HeadwayJourneyGroup
+
+# headwayjourneygroup 138a1-laborable ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138a1-laborable> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138a1-laborable"^^xsd:string ;
+    tmjourney:firstDepartureTime "06:15:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:30:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-laborable> .
+
+# headwayjourneygroup 138b1-laborable vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1-laborable> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138b1-laborable"^^xsd:string ;
+    tmjourney:firstDepartureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-laborable> .
+
+# headwayjourneygroup 138b2-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b2-laborable> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138b2-laborable"^^xsd:string ;
+    tmjourney:firstDepartureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-laborable> .
+
+# headwayjourneygroup 138a1-sabado ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138a1-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138a1-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "06:15:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:30:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-sabado> .
+
+# headwayjourneygroup 138b1-sabado vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138b1-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-sabado> .
+
+# headwayjourneygroup 138b2-sabado vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138b2-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "05:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-sabado> .
+
+# headwayjourneygroup 138a1-festivo ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138a1-festivo> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138a1-festivo"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:30:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-festivo> .
+
+# headwayjourneygroup 138b1-festivo vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b1-festivo> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138b1-festivo"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-festivo> .
+
+# headwayjourneygroup 138b2-festivo vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/138b2-festivo> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "138b2-festivo"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-festivo> .
+
+# HeadwayInterval
+
+# headwayinterval laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-laborable> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P7M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P20M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 7 - 20 min."^^xsd:string .
+
+# headwayinterval sabado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-sabado> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P12M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P27M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 12 - 27 min."^^xsd:string .
+
+# headwayinterval festivo
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/138-festivo> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P16M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P30M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 16 - 30 min."^^xsd:string .
+
+# DayTypes
+
+# Laborables (Lo elimino porque ya está para la ruta A, el earliest time puede ser el mínimo que se tiene en un día laborable, independiente de la ruta.)
+
+
+
+# Sábados (Lo elimino porque ya está para la ruta A, el earliest time puede ser el mínimo que se tiene en un día laborable, independiente de la ruta.)
+
+    
+
+# Domingo (Lo dejo porque no se tenía para la ruta A)
+
+    <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/festivo> a tmjourney:DayType ;
+    dcterms:identifier "Domingos y festivos"^^xsd:string ;
+    schema:name "Domingos y festivos"^^xsd:string ;
+    tmcommons:shortName "Domingos y festivos"^^xsd:string ;
+    tmjourney:earliestTime "07:00:00"^^xsd:time .
+
+
+# Calendario de servicio 2020
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/2020> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "2020"^^xsd:string ;
+    dcterms:description "Calendario de servicio de la EMT Madrid para 2020"^^xsd:string ;
+    schema:name "Calendario de servicio de la EMT Madrid para 2020"^^xsd:string ;
+    tmcommons:shortName "Calendario Servicio EMT Madrid 2020"^^xsd:string ; 
+    tmjourney:from "2020-01-01"^^xsd:date ;
+    tmjourney:to "2020-12-31"^^xsd:date ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CG-20200101-festivo> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CG-20200102-laborable> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CG-20200504-sabado> .
+
+# DayTypeAssignment
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CG-20200101-festivo> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-01-01"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/festivo> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CG-20200102-laborable> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-01-02"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CG-20200104-sabado> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-01-04"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/sabado> .
+
+
+# Línea 110
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/linea/110> a esautob:Linea ;
+    tmjourney:runBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/operador/emt> ;
+    dcterms:identifier "110"^^xsd:string ;
+    dcterms:description "Línea 110, comienzo en Manuel Becerra (Francisco Silvela) y final en el Cementerio de la Almudena. Los dos últimos servicios de ida no entran al cementerio sino que llegan hasta la Elipa (Santa Irene - Trece Rosas)."^^xsd:string ;
+    schema:url "https://www.emtmadrid.es/Bloques-EMT/EMT-BUS/Mi-linea-(1).aspx?linea=110&lang=es-ES"; 
+    schema:name "Línea 110"^^xsd:string ;
+    tmjourney:shortName "110"^^xsd:string ;
+    esautob:color "azul"^^xsd:string ;
+    esautob:afectadaPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/4AE45CA3-D5B1-4A5E-9BAA-482071FF732E> ;
+    esautob:cabeceraLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/3761> ;
+    esautob:finLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/5678> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110a> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110b> .
+
+# INCIDENCIA
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/4AE45CA3-D5B1-4A5E-9BAA-482071FF732E> a estraf:Incidencia ;
+    dcterms:identifier "4AE45CA3-D5B1-4A5E-9BAA-482071FF732E"^^xsd:string ;
+    dcterms:description "El 21 de junio de 20:00 a 21:00 horas aproximadamente, las líneas 21, 38, 53, 74, 106, 110, 146 y 210, tendrán retenciones y modificaciones en sus itinerarios en Alcalá 237, por concentración, según su desarrollo y de acuerdo con las restricciones de tráfico que realice Policía Municipal."^^xsd:string ;
+    dcterms:title "Concentración Plaza Ventas"^^xsd:string ;
+    esautob:incidenciaAdjunto "http://feeds.emtmadrid.es:8082/docs/20200621-Concentracion-Plaza-Ventas.pdf"^^xsd:anyURI ;
+    schema:dateCreated "2020-06-26T08:03:52+02:00"^^xsd:dateTime ;
+    # esto no está en estraf:Incidencia pero sí en incidencias emt
+    schema:startDate "2020-06-21T20:00:00+02:00"^^xsd:dateTime ;
+    schema:endDate "2020-06-21T21:00:00+02:00"^^xsd:dateTime ;
+    estraf:esRecurrente "false"^^xsd:boolean ;
+    estraf:numSentidos "2"^^xsd:integer ;
+    estraf:numCarriles "2"^^xsd:integer ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/point/756> ;
+    estraf:incidenciaEnTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/756> ;
+    estraf:tipoIncidencia <http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia/evento> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/point/756> a sf:Point ;
+    geo:lat "40,42262"^^xsd:float ;
+    geo:long "-3,71224"^^xsd:float ;
+    geo_core:xETRS89 "-2465360,47"^^xsd:float ;
+    #geo_core:yETRS89 "5100548,33"^^xsd:float ;
+    geo_core:yETRS89 "5100548,33"^^xsd:float .
+    #geosparql:asWKT  "POINT (-3.71224 40,42262)"^^geosparql:wktLiteral .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/tramo/123456> a estraf:Tramo ;
+	estraf:inicioTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/point/123456> ;
+	estraf:finTramo <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/Point/123457> .
+
+# Rutas de línea 110
+
+## Ruta de ida, de cabecera de línea a final de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110a> a tmjourney:Route ;
+    dcterms:identifier "110a"^^xsd:string ;
+    dcterms:description "Ruta de ida de la línea 110, comienzo en Manuel Becerra (Francisco Silvela) y final en el Cementerio de la Almudena. Los dos últimos servicios no entran al cementerio sino que acaban el servicio en La Elipa (Santa Irene - Trece Rosas)."^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/110a-3761> ;
+   tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/110a-3086> .
+
+## Ruta de vuelta de la línea 110, del final de línea a cabecera de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110b> a tmjourney:Route ;
+    dcterms:identifier "110b"^^xsd:string ;
+    dcterms:description "Ruta de vuelta de la línea 110, comienzo en el Cementerio de la Almudena y final en Manuel Becerra (Francisco Silvela)"^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/110b-3086> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/110b-3761> .
+
+# PointOnRoute
+
+# Ejemplo de 2 PointOnRoute de la ruta de vuelta
+
+# 1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/110b-3086> a tmjourney:PointOnRoute ;
+    dcterms:identifier "110b-3086"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/110b-3086> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/110b-3086> a tmjourney:RoutePoint ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/3086> .
+
+# 2
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/110b-3085> a tmjourney:PointOnRoute ;
+    dcterms:identifier "110b-3085"^^xsd:string ;
+    tmjourney:order "2"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/110b-3085> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/110b-3085> a tmjourney:RoutePoint ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/3085> .
+
+# Journey Patterns
+
+# Journey Pattern para Laborables
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110a1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "110a1"^^xsd:string ;
+    schema:name "110a1"^^xsd:string ;
+    tmjourney:distance "5,678"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110a> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/110a1> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110a1-3761> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110a1-3086> .
+
+# vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110b1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "110b1"^^xsd:string ;
+    schema:name "110b1"^^xsd:string ;
+    tmjourney:distance "7,225"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110b> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/110b1> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110b1-3086> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110b1-3761> .
+
+# JourneyPattern para los dos últimos servicios de ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110a2> a tmjourney:JourneyPattern ;
+    dcterms:identifier "110a2"^^xsd:string ;
+    schema:name "110a2"^^xsd:string ;
+    tmjourney:distance "4,281"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/110a> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/110a2> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110a1-3086> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110a1-3077> .
+
+# Destino visible de cada ruta:
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/110a1> a tmjourney:DestinationDisplay ;
+    dcterms:id "110a1" ;
+    tmjourney:frontText "CEMENTERIO DE LA ALMUDENA"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/110a2> a tmjourney:DestinationDisplay ;
+    dcterms:id "110a2" ;
+    tmjourney:frontText "LA ELIPA"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/110b1> a tmjourney:DestinationDisplay ;
+    dcterms:id "110b1" ;
+    tmjourney:frontText "PLAZA DE MANUEL BECERRA"^^xsd:string .
+
+# StopPointInJourneyPattern
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/110a1-4608> a tmjourney:StopPointInJourneyPattern ;
+    dcterms:identifier "110a1-3086"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:stopUse <http://w3id.org/transmodel/kos/journeys/stop-use-type/pass-through> ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/scheduledstoppoint/110a1-3086> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/schedulestoppoint/110a1-3086> a tmjourney:ScheduledStopPoint ;
+    tmjourney:includedIn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/manuelbecerra> ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/3086> ;
+    tmjourney:forAlighting "false"^^xsd:boolean ;
+    tmjourney:forBoarding "true"^^xsd:boolean .
+    
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/manuelbecerra> a tmjourney:StopArea ;
+    dcterms:id "manuelbecerra"^^xsd:string ;
+    dcterms:name "Manuel Becerra"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/3086> a esautob:Parada ;
+    schema:url "https://emtmadrid.es/paradas/#"^^xsd:anyURI ;
+    dcterms:id "3086"^^xsd:string ;
+    dcterms:description "Manuel Becerra"^^xsd:string ;
+    schema:name "Manuel Becerra"^^xsd:string ;
+    esautob:wifi "false"^^xsd:boolean ;
+    esautob:panelElectronico "true"^^xsd:boolean ;
+    esautob:zona "A"^^xsd:string ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/3086> ;
+    schema:address <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/manuelbecerra> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/3086> a sf:Point ;
+    geo_core:xETRS89 "-3.669505941"^^xsd:float ;
+    geo_core:yETRS89 "40.42907106"^^xsd:float ;
+    #geosparql:asWKT  "POINT (-3.6695059 40.42907106)"^^geosparql:wktLiteral ;
+    geo:lat "40.4290710639788"^^xsd:float ;
+    geo:long "-3.66950594187533"^^xsd:float .
+
+# VehicleJourney
+
+# VehicleJourney 110a1, hasta Cementerio de la Almudena
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/110a1> a tmjourney:VehicleJourney ;
+    dcterms:identifier "110a1"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "09:00:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110a1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/cualquiera> ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110a1> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# VehicleJourney 110a2, hasta La Elipa
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/110a2-todoslosdias> a tmjourney:VehicleJourney ;
+    dcterms:identifier "110a2"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "18:20:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110a2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/cualquiera> ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110a2> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# VehicleJourney 110a3, hasta Cementerio de la Almudena en Todos los Santos
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/110a1> a tmjourney:VehicleJourney ;
+    dcterms:identifier "110a3"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "09:00:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110a1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/todoslossantos> ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110a3> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# Vehicle Journey 110b1, desde Cementerio de la Almudena a Manuel Becerra
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/110b1> a tmjourney:VehicleJourney ;
+    dcterms:identifier "110b1"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "09:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110b1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/cualquiera> ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110b1> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# Vehicle Journey 110b2, desde Cementerio de la Almudena a Manuel
+# Becerra en Todos los Santos. Por cierto, me falta una descripción
+# para contar esto.
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/110b2> a tmjourney:VehicleJourney ;
+    dcterms:identifier "110b2"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "09:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/110b1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/todoslossantos> ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110b2> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+
+# HeadwayJourneyGroup
+
+# habrá que considerar, si se repiten estos hjg en otras líneas,
+# llamarlos de otra manera más genérica
+
+# headwayjourneygroup 110a1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110a1> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "110a1"^^xsd:string ;
+    tmjourney:firstDepartureTime "09:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "17:45:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110> .
+
+# headwayjourneygroup 110a2
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110a2> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "110a2"^^xsd:string ;
+    tmjourney:firstDepartureTime "18:20:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "18:55:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110> .
+
+# headwayjourneygroup 110a3. Probablemente cambien los valores pero no
+# está publicado.
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110a3> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "110a3"^^xsd:string ;
+    tmjourney:firstDepartureTime "09:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "17:45:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110-todoslossantos> .
+
+# headwayjourneygroup 110b1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110b1> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "110b1"^^xsd:string ;
+    tmjourney:firstDepartureTime "09:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "18:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110> .
+
+# headwayjourneygroup 110b2. Probablemente cambién los valores pero no
+# están publicados.
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/110b1> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "110b1"^^xsd:string ;
+    tmjourney:firstDepartureTime "09:30:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "18:15:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110-todoslossantos> .
+
+# headwayinteraval
+
+# 110
+
+# habrá que considerar, si se repite este intervalo en otras líneas,
+# llamarlo de una manera más genérica
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P35M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P35M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 35 min."^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/110-todoslossantos> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P15M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P15M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 15 min."^^xsd:string .
+
+
+# DayTypes
+
+# Se crea el daytype cualquiera para su uso en esta línea y también en
+# otras que comiencen a las 9 de la mañana y no diferencie entre
+# laborables, viernes, sábados, domingos o festivos.
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/cualquiera> a tmjourney:DayType ;
+    dcterms:identifier "cualquiera"^^xsd:string ;
+    dcterms:description "Un día cualquiera en el servicio de la EMT de Madrid. Comienza a las 9 AM." ;
+    schema:name "Cualquier día"^^xsd:string ;
+    tmcommons:shortName "Cualquiera"^^xsd:string ;
+    tmjourney:earliestTime "09:00:00"^^xsd:time .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/todoslossantos> a tmjourney:DayType ;
+    dcterms:identifier "todoslossantos"^^xsd:string ;
+    dcterms:description "Del 19 de octubre al 2 de noviembre" ;
+    schema:name "Todos los Santos"^^xsd:string ;
+    tmcommons:shortName "todoslossantos"^^xsd:string ;
+    tmjourney:earliestTime "09:00:00"^^xsd:time .
+
+# Calendario de servicio 2020
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/servicecalendar/2020> a tmjourney:ServiceCalendar ;
+    dcterms:identifier "2020"^^xsd:string ;
+    dcterms:description "Calendario de servicio de la EMT Madrid para 2020"^^xsd:string ;
+    schema:name "Calendario de servicio de la EMT Madrid para 2020"^^xsd:string ;
+    tmcommons:shortName "Calendario Servicio EMT Madrid 2020"^^xsd:string ; 
+    tmjourney:from "2020-01-01"^^xsd:date ;
+    tmjourney:to "2020-12-31"^^xsd:date ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CL110-20200101-cualquiera> ;
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CL110-20201019-todoslossantos> ;
+    # repetido se corrige en el siguiente tmjourney:definedBy   
+    tmjourney:definedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CL110-20201231-cualquiera> .
+
+# DayTypeAssignment
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CL110-20200101-cualquiera> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-01-01"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/cualquiera> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CL110-20201019-todoslossantos> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-10-19"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/todoslossantos> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytypeassignment/CL110-20201231-cualquiera> a tmjourney:DayTypeAssignment ;
+    tmjourney:date "2020-12-31"^^xsd:date ;
+    tmjourney:isAvailable "true"^^xsd:boolean ;
+    tmjourney:specifying <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/cualquiera> .
+
+
+# Línea 172
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/linea/172> a esautob:Linea ;
+    tmjourney:runBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/operador/emt> ;
+    dcterms:identifier "172"^^xsd:string ;
+    dcterms:description "Línea 172, comienzo en Mar de Cristal (Ayacucho) y final en Telefónica (Ronda de la Comunicación) salvo sábados, domingos y festivos que finaliza en la Avda. Camino de Santiago, Metro Las Tablas"^^xsd:string ;
+    schema:url "https://www.emtmadrid.es/Bloques-EMT/EMT-BUS/Mi-linea-(1).aspx?linea=172&lang=es-ES"; 
+    schema:name "Línea 172"^^xsd:string ;
+    tmjourney:shortName "172"^^xsd:string ;
+    esautob:color "azul"^^xsd:string ;
+    esautob:afectadoPorIncidencia <http://vocab.ciudadesabiertas.es/recurso/transporte/trafico/incidencia/123456> ; # inventada
+    esautob:cabeceraLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4608> ;
+    esautob:finLinea <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/5481> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172a> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172b> .
+
+# Rutas de línea 172
+
+## Ruta de ida, de cabecera de línea a final de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172a> a tmjourney:Route ;
+    dcterms:identifier "172a"^^xsd:string ;
+    dcterms:description "Ruta de ida de la línea 172, comienzo en Mar de Cristal (Ayacucho) y final en Telefónica (Ronda de la Comunicación) salvo sábados, domingos y festivos que finaliza en la Avda. Camino de Santiago, Metro Las Tablas"^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/172a-4603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/172a-5872> .
+
+## Ruta de vuelta de la línea 172, del final de línea a cabecera de línea
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172b> a tmjourney:Route ;
+    dcterms:identifier "172b"^^xsd:string ;
+    dcterms:description "Ruta de vuelta de la línea 172, comienzo Telefónica (Ronda de la Comunicación) salvo sábados, domingos y festivos que finaliza en la Avda. Camino de Santiago, Metro Las Tablas. Y final en en Mar de Cristal (Ayacucho)."^^xsd:string ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/172b-5872> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/172b-4603> .
+
+# Paradas.
+
+# Primera parada ruta de vuelta 
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/172b-5872> a tmjourney:PointOnRoute ;
+    dcterms:identifier "172b-5872"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/172b-5872> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/172b-5872> a tmjourney:RoutePoint ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/5872> .
+
+# Segunda parada ruta de vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/pointonroute/172b-5864> a tmjourney:PointOnRoute ;
+    dcterms:identifier "172b-5864"^^xsd:string ;
+    tmjourney:order "2"^^xsd:integer ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/172b-5864> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/routepoint/172b-5864> a tmjourney:RoutePoint ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/5864> .
+
+
+# Journey Patterns
+
+# Journey Pattern para Laborables
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172a1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "172a1"^^xsd:string ;
+    schema:name "172a1"^^xsd:string ;
+    tmjourney:distance "11,160"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172a> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172a1> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172a1-4603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172a1-5872> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172b1> a tmjourney:JourneyPattern ;
+    dcterms:identifier "172b1"^^xsd:string ;
+    schema:name "172b1"^^xsd:string ;
+    tmjourney:distance "11,549"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172b> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172b1> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172b1-5872> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172b1-4603> .
+
+# JourneyPattern para sábados, domingos y festivos
+
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172a2> a tmjourney:JourneyPattern ;
+    dcterms:identifier "172a2"^^xsd:string ;
+    schema:name "172a2"^^xsd:string ;
+    tmjourney:distance "9,800"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172a> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172a2> ; 
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172a2-4603> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172a2-3767> .
+    
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172b2> a tmjourney:JourneyPattern ;
+    dcterms:identifier "172b2"^^xsd:string ;
+    schema:name "172b2"^^xsd:string ;
+    tmjourney:distance "10,518"^^xsd:double ; 
+    tmjourney:on <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/ruta/172b> ;
+    tmjourney:journeyPatternAdvertisedFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172b1> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172b1-3766> ;
+    tmjourney:madeUpOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172b1-4603> .
+
+# Destino visible de cada ruta:
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172a1> a tmjourney:DestinationDisplay ;
+    dcterms:id "172a1" ;
+    tmjourney:frontText "Telefónica"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172a1> a tmjourney:DestinationDisplay ;
+    dcterms:id "172a2" ;
+    tmjourney:frontText "Las Tablas"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/destinationdisplay/172b1> a tmjourney:DestinationDisplay ;
+    dcterms:id "172b1" ;
+    tmjourney:frontText "Mar de Cristal"^^xsd:string .
+
+# StopPointInJourneyPattern
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoppointinjourneypattern/172a1-4603> a tmjourney:StopPointInJourneyPattern ;
+    dcterms:identifier "172a1-4603"^^xsd:string ;
+    tmjourney:order "1"^^xsd:integer ;
+    tmjourney:stopUse <http://w3id.org/transmodel/kos/journeys/stop-use-type/pass-through> ;
+    tmjourney:viewedAs <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/scheduledstoppoint/172a1-4603> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/schedulestoppoint/172a1-4603> a tmjourney:ScheduledStopPoint ;
+    tmjourney:includedIn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/mardecristal> ;
+    tmcommons:functionalCentroidFor <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4603> ;
+    tmjourney:forAlighting "false"^^xsd:boolean ;
+    tmjourney:forBoarding "true"^^xsd:boolean .
+    
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/stoparea/mardecristal> a tmjourney:StopArea ;
+    dcterms:id "mardecristal"^^xsd:string ;
+    dcterms:name "Mar de Cristal"^^xsd:string .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/parada/4603> a esautob:Parada ;
+    schema:url "https://emtmadrid.es/paradas/#"^^xsd:anyURI ;
+    dcterms:identifier "4603"^^xsd:string ;
+    dcterms:description "Mar de Cristal (Ayacucho)"^^xsd:string ;
+    schema:name "Mar de Cristal"^^xsd:string ;
+    esautob:wifi "false"^^xsd:boolean ;
+    esautob:panelElectronico "true"^^xsd:boolean ;
+    esautob:zona "A"^^xsd:string ;
+    geosparql:hasGeometry <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4603> ;
+    schema:address <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal/mardecristalcristorey> .
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/point/4603> a sf:Point ;
+    geo_core:xETRS89 "-3.639653"^^xsd:float ;
+    geo_core:yETRS89 "40.470055"^^xsd:float ;
+    #geosparql:asWKT  "POINT (-3.639653 40.470055)"^^geosparql:wktLiteral ;
+    geo:lat "40.470055"^^xsd:float ;
+    geo:long "-3.639653"^^xsd:float .
+
+# VehicleJourneys
+
+
+# VehicleJourney 172a1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/172a1> a tmjourney:VehicleJourney ;
+    dcterms:identifier "172a1"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:40:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172a1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172a1> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# VJ 172b1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/172b1> a tmjourney:VehicleJourney ;
+    dcterms:identifier "172b1"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "06:20:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172b1> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/laborable>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172b1> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VJ 172a2-sabado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/172a2-sabado> a tmjourney:VehicleJourney ;
+    dcterms:identifier "172a2-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:30:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172a2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/sabado>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172a2-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# VJ 172b2-sabado
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/172b2-sabado> a tmjourney:VehicleJourney ;
+    dcterms:identifier "172b2-sabado"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "07:00:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172b2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/sabado>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172b2-sabado> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# VJ 172a2-festivo
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/172a2-festivo> a tmjourney:VehicleJourney ;
+    dcterms:identifier "172a2-festivo"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "06:20:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172a2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/festivo>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172a2-festivo> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/outbound> .
+
+# VJ 172b2-festivo
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/vehiclejourney/172b2-festivo> a tmjourney:VehicleJourney ;
+    dcterms:identifier "172b2-festivo"^^xsd:string ;
+    tmjourney:journeyDuration "P1D"^^xsd:duration ;
+    tmjourney:departureTime "05:40:00+02:00"^^xsd:time ;
+    tmjourney:madeUsing <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/journeypattern/172b2> ;
+    tmjourney:workedOn <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/daytype/festivo>  ;
+    tmjourney:composedOf <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172b2-festivo> ;
+    tmjourney:directionType <http://w3id.org/transmodel/kos/journeys/direction-type/inbound> .
+
+# HeadwayJourneyGroup
+
+# headwayjourneygroup 172a1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172a1> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "172a1"^^xsd:string ;
+    tmjourney:firstDepartureTime "05:40:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:05:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-laborable> .
+
+# headwayjourneygroup 172b1
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172b1> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "172b1"^^xsd:string ;
+    tmjourney:firstDepartureTime "06:20:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:30:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-laborable> .
+
+# headwayjourneygroup 172a2
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172a2-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "172a2-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:05:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-sdf> .
+
+# headwayjourneygroup 172-sabado vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172b2-sabado> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "172b2-sabado"^^xsd:string ;
+    tmjourney:firstDepartureTime "07:00:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:05:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-sdf> .
+
+# headwayjourneygroup 172-festivo ida
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172a2-festivo> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "172a2-festivo"^^xsd:string ;
+    tmjourney:firstDepartureTime "05:40:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:05:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-sdf> .
+
+# headwayjourneygroup 172-festivo vuelta
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayjourneygroup/172b2-domingo> a tmjourney:HeadwayJourneyGroup ;
+    dcterms:identifier "172b2-festivo"^^xsd:string ;
+    tmjourney:firstDepartureTime "06:20:00+02:00"^^xsd:time ;
+    tmjourney:lastDepartureTime "23:30:00+02:00"^^xsd:time ;
+    tmjourney:determinedBy <http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-sdf> .
+
+# Headway Interval
+
+# headwayinterval 172-laborable
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-laborable> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P12M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P28M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 12 - 28 min."^^xsd:string .
+
+# headwayinterval 172-sdf
+
+<http://vocab.ciudadesabiertas.es/recurso/transporte/autobus/headwayinterval/172-sdf> a tmjourney:HeadwayInterval ;
+    tmjourney:minimumHeadwayInterval "P20M"^^xsd:duration ;
+    tmjourney:maximumHeadwayInterval "P30M"^^xsd:duration ;
+    tmjourney:scheduledHeadwayInterval "Cada 20 - 30 min."^^xsd:string .
+
+# DayTypes Ya están para otras líneas, los elimino
+
+
+# Calendario de servicio para 2020 es el mismo de la linea 138, lo elimino
+
+
+    
+# DayTypeAssignment - mismos de la línea 138, lo elimino.
+
+
