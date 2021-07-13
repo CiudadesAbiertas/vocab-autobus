@@ -71,9 +71,9 @@ The vocabulary has been divided into three main parts:
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="es">Vocabulario para la representación de datos sobre el transporte público urbano de autobuses.</dc:title>
         <dc:title xml:lang="en">Vocabulary for the representation of data on public transport by bus.</dc:title>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-05</dct:created>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-05-05</dct:created>
         <dct:hasVersion>1.0.0</dct:hasVersion>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03</dct:issued>
+        <dct:issued xml:lang="es">2021-07-13</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0</dct:license>
         <dct:publisher xml:lang="en">Ontology Engineering Group - Universidad Politécnica de Madrid</dct:publisher>
         <dct:publisher xml:lang="es">Ontology Engineering Group - Universidad Politécnica de Madrid</dct:publisher>
@@ -81,8 +81,8 @@ The vocabulary has been divided into three main parts:
         <vann:preferredNamespaceUri rdf:resource="http://vocab.ciudadesabiertas.es/def/transporte/autobus#"/>
         <rdfs:comment xml:lang="es">Este vocabulario ha sido desarrollado en el contexto de la actuación sobre datos abiertos del proyecto &quot;Plataforma de Gobierno Abierto, Colaborativa e Interoperable&quot; de la &quot;II Convocatoria de Ciudades Inteligentes&quot; del Ministerio de Economía y Empresa lanzada a través de la Entidad Pública Empresarial Red.es adscrita a la Secretaría de estado de Avance Digital de dicho ministerio.</rdfs:comment>
         <rdfs:comment xml:lang="en">This vocabulary has been developed in the context of the action on open data of the project &quot;Platform of Open, Collaborative and Interoperable Government&quot; of the &quot;II Call for Intelligent Cities&quot; of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Advancement of that ministry.</rdfs:comment>
-        <owl:versionInfo xml:lang="en">This is the initial version of the Traffic ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate.</owl:versionInfo>
-        <owl:versionInfo xml:lang="es">Versión 1.0 de la ontología de Tráfico que ha sido implementada en el contexto del proyecto Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">This is the initial version of the Public Bus ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate.</owl:versionInfo>
+        <owl:versionInfo xml:lang="es">Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1709,7 +1709,7 @@ The vocabulary has been divided into three main parts:
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://w3id.org/transmodel/journeys#distanceFromStart"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2113,8 +2113,8 @@ The vocabulary has been divided into three main parts:
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
         <rdfs:label xml:lang="es">como WKT</rdfs:label>
         <rdfs:comment xml:lang="es">La serialización de una geometría en WKT o Well Known Terms</rdfs:comment>
-        <rdfs:comment xml:lang="en">The WKT serialization of a geometry </rdfs:comment>
         <rdfs:label xml:lang="en">asWKT</rdfs:label>
+        <rdfs:comment xml:lang="en">The WKT serialization of a geometry </rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
