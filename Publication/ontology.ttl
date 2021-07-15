@@ -17,7 +17,7 @@
 El vocabulario se ha dividido en tres grandes partes:
 - Organizaciones (autoridad y operador) y sus líneas
 - Rutas y puntos de las mismas, incluidas las paradas.
-- Viajes y patrones de viaje"""@es ,
+- Viajes y patrones de viaje""" ,
                                                                                                       """This vocabulary has been developed in the context of the action on open data of the project \"Platform of Open, Collaborative and Interoperable Government\" of the \"II Call for Intelligent Cities\" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Advancement of that ministry.
 	The Bus Vocabulary works with the European standard TransModel (EN 12896 made by the CEN, European Committee for Standardization) which has been adopted by the European regulation 2017/1926 and which follows the European directive on intelligent transport services (Directive 2010/40/EU on ITS,Intelligent Transport System).
 	Since December 2019 this regulation has come into force and dictates that any European operator or transport authority must offer its data in formats compatible with Transmodel.
@@ -27,8 +27,11 @@ El vocabulario se ha dividido en tres grandes partes:
 The vocabulary has been divided into three main parts:
 - Organizations (authority and operator) and their lines
 - Routes and points thereof, including stops.
-- Journeys and travel patterns."""@en ;
-                                                           <http://purl.org/dc/elements/1.1/contributor> "Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid"@es ,
+- Journeys and travel patterns.""" ;
+                                                           <http://purl.org/dc/elements/1.1/contributor> "Andrés Iglesias Pardo - Empresa Municipal de Transportes de Madrid"@es ,
+                                                                                                         "Andrés Recio Martín - Empresa Municipal de Transportes de Madrid"@es ,
+                                                                                                         "Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid"@es ,
+                                                                                                         "José Antonio Chanca Cáceres - Ayuntamiento de Zaragoza"@es ,
                                                                                                          "María Carmen Ruiz Moreno - Ayuntamiento de Madrid"@es ,
                                                                                                          "María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza"@es ,
                                                                                                          "María Jesús Gallego San Miguel - Ayuntamiento de Madrid"@es ,
@@ -41,15 +44,15 @@ The vocabulary has been divided into three main parts:
                                                                                                      "Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                                      "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)" ,
                                                                                                      "Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
-                                                           <http://purl.org/dc/elements/1.1/description> "Este vocabulario ha sido desarrollado en el contexto de la actuación sobre datos abiertos del proyecto \"Plataforma de Gobierno Abierto, Colaborativa e Interoperable\" de la \"II Convocatoria de Ciudades Inteligentes\" del Ministerio de Economía y Empresa lanzada a través de la Entidad Pública Empresarial Red.es adscrita a la Secretaría de estado de Avance Digital de dicho ministerio."@es ,
-                                                                                                         "This vocabulary is being developed in the context of the action on open data of the project \"Platform of Open, Collaborative and Interoperable Government\" of the \"II Call for Intelligent Cities\" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Progress of the Ministry."@en ;
+                                                           <http://purl.org/dc/elements/1.1/description> "Este vocabulario ha sido desarrollado en el contexto de la actuación sobre datos abiertos del proyecto \"Plataforma de Gobierno Abierto, Colaborativa e Interoperable\" de la \"II Convocatoria de Ciudades Inteligentes\" del Ministerio de Economía y Empresa lanzada a través de la Entidad Pública Empresarial Red.es adscrita a la Secretaría de estado de Avance Digital de dicho ministerio." ,
+                                                                                                         "This vocabulary is being developed in the context of the action on open data of the project \"Platform of Open, Collaborative and Interoperable Government\" of the \"II Call for Intelligent Cities\" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Progress of the Ministry." ;
                                                            <http://purl.org/dc/elements/1.1/identifier> "http://vocab.ciudadesabiertas.es/def/transporte/autobus"@es ;
                                                            <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
                                                            <http://purl.org/dc/elements/1.1/title> "Vocabulario para la representación de datos sobre el transporte público urbano de autobuses."@es ,
                                                                                                    "Vocabulary for the representation of data on public transport by bus."@en ;
-                                                           <http://purl.org/dc/terms/created> "2020-05-05"^^xsd:dateTime ;
+                                                           <http://purl.org/dc/terms/created> "2020-05-05"^^xsd:date ;
                                                            <http://purl.org/dc/terms/hasVersion> "1.0.0" ;
-                                                           <http://purl.org/dc/terms/issued> "2020-05-07"^^xsd:dateTime ;
+                                                           <http://purl.org/dc/terms/issued> "2021-07-13"@es ;
                                                            <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
                                                            <http://purl.org/dc/terms/publisher> "Ontology Engineering Group - Universidad Politécnica de Madrid"@en ,
                                                                                                 "Ontology Engineering Group - Universidad Politécnica de Madrid"@es ;
@@ -57,8 +60,8 @@ The vocabulary has been divided into three main parts:
                                                            <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                                                            rdfs:comment "Este vocabulario ha sido desarrollado en el contexto de la actuación sobre datos abiertos del proyecto \"Plataforma de Gobierno Abierto, Colaborativa e Interoperable\" de la \"II Convocatoria de Ciudades Inteligentes\" del Ministerio de Economía y Empresa lanzada a través de la Entidad Pública Empresarial Red.es adscrita a la Secretaría de estado de Avance Digital de dicho ministerio."@es ,
                                                                         "This vocabulary has been developed in the context of the action on open data of the project \"Platform of Open, Collaborative and Interoperable Government\" of the \"II Call for Intelligent Cities\" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Advancement of that ministry."@en ;
-                                                           owl:versionInfo "This is the initial version of the Traffic ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate."@en ,
-                                                                           "Versión 1.0 de la ontología de Tráfico que ha sido implementada en el contexto del proyecto Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña."@es .
+                                                           owl:versionInfo "This is the initial version of the Public Bus ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate."@en ,
+                                                                           "Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña."@es .
 
 #################################################################
 #    Annotation properties
@@ -98,6 +101,10 @@ The vocabulary has been divided into three main parts:
 
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
@@ -146,6 +153,10 @@ rdfs:domain rdf:type owl:AnnotationProperty .
 #    Datatypes
 #################################################################
 
+###  http://www.opengis.net/ont/geosparql#wktLiteral
+<http://www.opengis.net/ont/geosparql#wktLiteral> rdf:type rdfs:Datatype .
+
+
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
 
@@ -161,7 +172,6 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://schema.org/address
 <http://schema.org/address> rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf owl:topObjectProperty ;
-                            rdfs:domain :Parada ;
                             rdfs:range <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal> ;
                             rdfs:comment "La dirección de una Parada."@es ,
                                          "The address of a Stop Point"@en ;
@@ -172,7 +182,6 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://schema.org/contactPoint
 <http://schema.org/contactPoint> rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf owl:topObjectProperty ;
-                                 rdfs:domain <http://w3id.org/transmodel/organisations#Organisation> ;
                                  rdfs:range <http://schema.org/ContactPoint> ;
                                  rdfs:comment "A contact point for a person or organization."@en ,
                                               "Un Punto de Información de Contacto para una persona u organización."@es ;
@@ -219,24 +228,24 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://vocab.ciudadesabiertas.es/def/transporte/autobus#generadoPorIncidencia
 :generadoPorIncidencia rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain <http://w3id.org/transmodel/journeys#JourneyPattern> ;
                        rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
                        rdfs:comment "Relación de un patrón de viaje de una ruta que se ha creado por una incidencia."@es ,
                                     "Relationship of a JourneyPattern of a Route which has been created by an Incidence."@en ;
-                       rdfs:domain "" ;
                        rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/autobus> ;
                        rdfs:label "JourneyPattern generated by an Incidenceline affected by an incidence"@en ,
                                   "patrón de ruta generado por Incidencia"@es .
 
 
-###  http://w3id.org/transmodel/journeys#aFunctionalCentroidFor
-<http://w3id.org/transmodel/journeys#aFunctionalCentroidFor> rdf:type owl:ObjectProperty ;
-                                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                                             rdfs:domain <http://w3id.org/transmodel/journeys#Point> ;
-                                                             rdfs:range <http://w3id.org/transmodel/journeys#Zone> ;
-                                                             rdfs:comment "Esta propiedad permite la conexión de un Punto con una Zona."@es ,
-                                                                          "This property allows connecting a Point with a Zone."@en ;
-                                                             rdfs:label "Un centroide funcional para"@es ,
-                                                                        "aFunctionalCentroidFor"@en .
+###  http://w3id.org/transmodel/commons#functionalCentroidFor
+<http://w3id.org/transmodel/commons#functionalCentroidFor> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                                           rdfs:domain <http://w3id.org/transmodel/journeys#Point> ;
+                                                           rdfs:range <http://w3id.org/transmodel/commons#Zone> ;
+                                                           rdfs:comment "Esta propiedad permite la conexión de un Punto con una Zona."@es ,
+                                                                        "This property allows connecting a Point with a Zone."@en ;
+                                                           rdfs:label "Un centroide funcional para"@es ,
+                                                                      "functionalCentroidFor"@en .
 
 
 ###  http://w3id.org/transmodel/journeys#composedOf
@@ -447,6 +456,22 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                    "Sirve el Transporte Público para"@es .
 
 
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.opengis.net/ont/geosparql#Geometry> .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:comment "A spatial representation for a given feature."@en ,
+                                                                "Una representación espacial para una característica espacial dada"@es ;
+                                                   rdfs:domain "" ;
+                                                   rdfs:label "hasGeometry"@en ,
+                                                              "tiene geometría"@es .
+
+
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
                                                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -461,8 +486,8 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
                                                  rdfs:subPropertyOf owl:topObjectProperty ;
-                                                 rdfs:domain :RealTimePassingTime ;
-                                                 rdfs:range <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                 rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                                 rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                                                  rdfs:comment "La observación esautob:RealTimePassingTime aparece en tmjourney:PointInLinkSequence."@es ,
                                                               "The Observation esautob:RealTimePassingTime has a feature of Interest which is tmjourney:PointInLinkSequece"@en ;
                                                  rdfs:label "Aparece en"@es ,
@@ -471,8 +496,8 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/sosa/madeBySensor
 <http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico> ;
-                                         rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico> ;
+                                         rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+                                         rdfs:range <http://www.w3.org/ns/sosa/Sensor> ;
                                          rdfs:comment "Relación entre una Observación y un Sensor que realiza la Observación."@en ,
                                                       "Relation between an Observation and the Sensor which made the Observation."@es ;
                                          rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
@@ -482,8 +507,6 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/sosa/observedProperty
 <http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico> ;
-                                             rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> ;
                                              rdfs:comment "Relación que enlaza la propiedad que se observa."@es ,
                                                           "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
                                              rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
@@ -493,8 +516,6 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/sosa/observes
 <http://www.w3.org/ns/sosa/observes> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico> ;
-                                     rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> ;
                                      rdfs:comment "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."@es ,
                                                   "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en ;
                                      rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
@@ -512,15 +533,6 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain [ rdf:type owl:Class ;
-                                                     owl:unionOf ( :Parada
-                                                                   <http://w3id.org/transmodel/commons#Zone>
-                                                                   <http://w3id.org/transmodel/journeys#DayType>
-                                                                   <http://w3id.org/transmodel/journeys#DayTypeAssignment>
-                                                                   <http://w3id.org/transmodel/journeys#Route>
-                                                                   <http://w3id.org/transmodel/journeys#ServiceCalendar>
-                                                                 )
-                                                   ] ;
                                        rdfs:range xsd:string ;
                                        rdfs:comment "A description of the resource within a given context."@en ,
                                                     "Una descripción del recurso dentro de un contexto dado."@es ;
@@ -531,18 +543,6 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
-                                      rdfs:domain [ rdf:type owl:Class ;
-                                                    owl:unionOf ( :Parada
-                                                                  <http://w3id.org/transmodel/commons#Zone>
-                                                                  <http://w3id.org/transmodel/journeys#DayType>
-                                                                  <http://w3id.org/transmodel/journeys#DayTypeAssignment>
-                                                                  <http://w3id.org/transmodel/journeys#HeadwayInterval>
-                                                                  <http://w3id.org/transmodel/journeys#LinkSequence>
-                                                                  <http://w3id.org/transmodel/journeys#PointInLinkSequence>
-                                                                  <http://w3id.org/transmodel/journeys#StopArea>
-                                                                  <http://w3id.org/transmodel/journeys#VehicleJourney>
-                                                                )
-                                                  ] ;
                                       rdfs:range xsd:string ;
                                       rdfs:comment "An unambiguous reference to the resource within a given context."@en ,
                                                    "Referencia inequívoca al recurso dentro de un contexto dado."@es ;
@@ -562,15 +562,24 @@ xsd:duration rdf:type rdfs:Datatype .
                                              "Nombre alternativo"@en .
 
 
+###  http://schema.org/dateCreated
+<http://schema.org/dateCreated> rdf:type owl:DatatypeProperty ;
+                                rdfs:range xsd:dateTime ;
+                                rdfs:comment "La fecha o fecha y hora de creación en formato fecha ISO 8601"@es ,
+                                             "The end date or end date and time in ISO 8601 date format."@en ;
+                                rdfs:isDefinedBy <http://schema.org/> ;
+                                rdfs:label "Date created"@en ,
+                                           "Fecha de creación"@es .
+
+
 ###  http://schema.org/datePosted
 <http://schema.org/datePosted> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
                                rdfs:range xsd:dateTime ;
-                               rdfs:comment "La fecha y hora de publicación de una incidencia (en formato fecha ISO 8601)"@es ,
-                                            "The end date and time of the incidence (in ISO 8601 date format)."@en ;
+                               rdfs:comment "La fecha o fecha y hora de publicación en formato fecha ISO 8601"@es ,
+                                            "The end date or date and time in ISO 8601 date format."@en ;
                                rdfs:isDefinedBy <http://schema.org/> ;
-                               rdfs:label "fecha de publicación de incidencia"@es ,
-                                          "posted incidence date"@en .
+                               rdfs:label "Date posted"@en ,
+                                          "Fecha de publicación"@es .
 
 
 ###  http://schema.org/email
@@ -586,11 +595,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://schema.org/endDate
 <http://schema.org/endDate> rdf:type owl:DatatypeProperty ;
-                            rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
                             rdfs:range xsd:dateTime ;
-                            rdfs:comment """La fecha y hora de finalización de
-	    una incidencia (en formato fecha ISO 8601)"""@es ,
-                                         "The end date and time of an incidence (in ISO 8601 date format)."@en ;
+                            rdfs:comment "La fecha o fecha y hora de finalización en formato fecha ISO 8601)"@es ,
+                                         "The end date or date and time of an incidence in ISO 8601 date format)."@en ;
                             rdfs:isDefinedBy <http://schema.org/> ;
                             rdfs:label "end date"@en ,
                                        "fecha de fin"@es .
@@ -600,8 +607,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://schema.org/legalName> rdf:type owl:DatatypeProperty ;
                               rdfs:domain <http://schema.org/ContactPoint> ;
                               rdfs:range xsd:string ;
-                              rdfs:comment "Legal Name"@en ,
-                                           "Nombre legal"@es ;
+                              rdfs:comment "Legal Name of an entity"@en ,
+                                           "Nombre legal de una entidad"@es ;
                               rdfs:isDefinedBy <http://schema.org/> ;
                               rdfs:label "Legal Name"@es ,
                                          "Nombre legal"@en .
@@ -609,19 +616,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://schema.org/name
 <http://schema.org/name> rdf:type owl:DatatypeProperty ;
-                         rdfs:domain [ rdf:type owl:Class ;
-                                       owl:unionOf ( :Parada
-                                                     <http://w3id.org/transmodel/commons#Zone>
-                                                     <http://w3id.org/transmodel/journeys#DayType>
-                                                     <http://w3id.org/transmodel/journeys#Line>
-                                                     <http://w3id.org/transmodel/journeys#LinkSequence>
-                                                     <http://w3id.org/transmodel/journeys#ServiceCalendar>
-                                                     <http://w3id.org/transmodel/journeys#StopArea>
-                                                   )
-                                     ] ;
                          rdfs:range xsd:string ;
-                         rdfs:comment "Name"@en ,
-                                      "Nombre"@es ;
+                         rdfs:comment "Name of an entity."@en ,
+                                      "Nombre fr uns entidad"@es ;
                          rdfs:isDefinedBy <http://schema.org/> ;
                          rdfs:label "Name"@es ,
                                     "Nombre"@en .
@@ -629,10 +626,9 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://schema.org/startDate
 <http://schema.org/startDate> rdf:type owl:DatatypeProperty ;
-                              rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
                               rdfs:range xsd:dateTime ;
-                              rdfs:comment "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."@es ,
-                                           "The start date and time of an incidence (in ISO 8601 date format)."@en ;
+                              rdfs:comment "La fecha o fecha y hora de inicio en formato fecha ISO 8601."@es ,
+                                           "The start date or start date and time in ISO 8601 date format."@en ;
                               rdfs:isDefinedBy <http://schema.org/> ;
                               rdfs:label "(expected) start date"@en ,
                                          "fecha de inicio (prevista)"@es .
@@ -651,13 +647,6 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://schema.org/url
 <http://schema.org/url> rdf:type owl:DatatypeProperty ;
-                        rdfs:domain [ rdf:type owl:Class ;
-                                      owl:unionOf ( <http://schema.org/ContactPoint>
-                                                    :Parada
-                                                    <http://w3id.org/transmodel/journeys#Line>
-                                                    <http://w3id.org/transmodel/journeys#Route>
-                                                  )
-                                    ] ;
                         rdfs:range xsd:anyURI ;
                         rdfs:comment "Dirección URL pública donde puedes obtener información de la entidad"@en ,
                                      "Public URL where you can get some information from the entity"@es ;
@@ -733,6 +722,17 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                            rdfs:isDefinedBy <http://schema.org/> ;
                                                                            rdfs:label "(expected) end date"@en ,
                                                                                       "fecha de fin (prevista)"@es .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                                                                            rdfs:range xsd:anyURI ;
+                                                                            rdfs:comment "A document where more information about the incidence can be found."@en ,
+                                                                                         "Un documento donde se puede consultar la información sobre la incidencia."@es ;
+                                                                            rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                                            rdfs:label "adjunto a la incidencia"@es ,
+                                                                                       "attached to incidence"@en .
 
 
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles
@@ -1010,6 +1010,10 @@ xsd:duration rdf:type rdfs:Datatype .
                                                     "to"@en .
 
 
+###  http://www.opengis.net/ont/geosparql#asWKT
+<http://www.opengis.net/ont/geosparql#asWKT> rdf:type owl:DatatypeProperty .
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
                                               rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
@@ -1031,7 +1035,7 @@ xsd:duration rdf:type rdfs:Datatype .
 ###  http://www.w3.org/ns/sosa/resultTime
 <http://www.w3.org/ns/sosa/resultTime> rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf owl:topDataProperty ;
-                                       rdfs:domain :RealTimePassingTime ;
+                                       rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
                                        rdfs:range xsd:dateTime ;
                                        rdfs:comment "Esta propiedad establece la fecha/hora de la observación."@es ,
                                                     "This property sets the dateTime of the observation"@en ;
@@ -1104,14 +1108,9 @@ xsd:duration rdf:type rdfs:Datatype .
                                 "Waiting Time"@en .
 
 
-###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico> rdf:type owl:Class .
-
-
 ###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia
 <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> rdf:type owl:Class ;
                                                                      rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
-                                                                     owl:disjointWith <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Parada> ;
                                                                      rdfs:comment "Incidence in the traffic system of a city"@en ,
                                                                                   "Incidencia que ocurre en el sistema de tráfico de una ciudad"@es ;
                                                                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
@@ -1127,18 +1126,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                                 rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
                                                                                 rdfs:label "Incidencia planificada"@es ,
                                                                                            "Planned incidence"@en .
-
-
-###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico> rdf:type owl:Class .
-
-
-###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#Parada
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#Parada> rdf:type owl:Class .
-
-
-###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico
-<http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico> rdf:type owl:Class .
 
 
 ###  http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal
@@ -1278,7 +1265,8 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/transmodel/journeys#PointInLinkSequence
 <http://w3id.org/transmodel/journeys#PointInLinkSequence> rdf:type owl:Class ;
-                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                                                          [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://w3id.org/transmodel/journeys#viewedAs> ;
                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                             owl:onClass <http://w3id.org/transmodel/journeys#Point>
@@ -1286,7 +1274,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://w3id.org/transmodel/journeys#distanceFromStart> ;
                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                            owl:onDataRange xsd:float
+                                                                            owl:onDataRange xsd:double
                                                                           ] ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://w3id.org/transmodel/journeys#order> ;
@@ -1390,15 +1378,10 @@ xsd:duration rdf:type rdfs:Datatype .
                                                                 "Viaje de un vehículo"@es .
 
 
-###  http://w3id.org/transmodel/journeys#Zone
-<http://w3id.org/transmodel/journeys#Zone> rdf:type owl:Class .
-
-
 ###  http://w3id.org/transmodel/organisations#Authority
 <http://w3id.org/transmodel/organisations#Authority> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://w3id.org/transmodel/organisations#Organisation> ;
-                                                     owl:disjointWith <http://w3id.org/transmodel/organisations#Operator> ,
-                                                                      <http://w3id.org/transmodel/organisations#Organisation> ;
+                                                     owl:disjointWith <http://w3id.org/transmodel/organisations#Operator> ;
                                                      rdfs:comment "Autoridad del Transporte Público, organización bajo la cual está la responsabilidad de organizar el servicio de transporte de una cierta área (por ejemplo, zona administrativa)."@es ,
                                                                   "Public Transport Authority, the organization under which the responsability of organising the TransportService in a certain area (AdministrativeZone) is placed"@en ;
                                                      rdfs:label "Authority"@en ,
@@ -1512,15 +1495,6 @@ xsd:duration rdf:type rdfs:Datatype .
                                               <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
 
 
-###  http://www.w3.org/ns/sosa/ObservableProperty
-<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
-                                               rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
-                                               rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
-                                               rdfs:label "Observable Property"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
-
-
 ###  http://www.w3.org/ns/sosa/Observation
 <http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class ;
                                         rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"@en ;
@@ -1599,6 +1573,12 @@ xsd:duration rdf:type rdfs:Datatype .
                                   rdfs:comment "Date of formal issuance (e.g., publication) of the resource."@en ;
                                   rdfs:isDefinedBy "http://purl.org/dc/terms/"@en ;
                                   rdfs:label "Date Issued"@en .
+
+
+<http://www.opengis.net/ont/geosparql#asWKT> rdfs:comment "La serialización de una geometría en WKT o Well Known Terms"@es ,
+                                                          "The WKT serialization of a geometry "@en ;
+                                             rdfs:label "asWKT"@en ,
+                                                        "como WKT"@es .
 
 
 ###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

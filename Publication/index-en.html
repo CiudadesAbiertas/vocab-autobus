@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="resources/primer.css" media="screen" />
-  <link rel="stylesheet" href="resources/rec.css" media="screen" />
-  <link rel="stylesheet" href="resources/extra.css" media="screen" />
-  <link rel="stylesheet" href="resources/owl.css" media="screen" />
-  <title>Vocabulario para la representación de datos sobre el transporte público urbano de autobuses</title>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Vocabulary for the representation of data on public transport by bus.</title>
+
+
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://vocab.ciudadesabiertas.es/def/transporte/autobus","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://vocab.ciudadesabiertas.es/def/transporte/autobus","name":"Vocabulary for the representation of data on urban public bus transport.", "headline":"This vocabulary has been developed in the context of the action on open data of the project "Platform of Open, Collaborative and Interoperable Government" of the "II Call for Intelligent Cities" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretary of State for Digital Progress of the Ministry", "datePublished":"2020-05-05", "version":"Version 1.0 of the Traffic ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which participate the following city councils: Madrid, Zaragoza, Santiago de Compostela and A Coruña.", "license":"https://creativecommons.org/licenses/by/4.0", "author":[{"@type":"Person","name":"Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)"},{"@type":"Person","name":"Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)"}], "contributor":[{"@type":"Person","name":"Honorio Enrique Crespo Díaz-Alejo - Madrid City Council"},{"@type":"Person","name":"María Carmen Ruiz Moreno - Madrid City Council"},{"@type":"Person","name":"María Jesús Fernández Ruiz - Zaragoza City Council"},{"@type":"Person","name":"María Jesús Gallego San Miguel - Madrid City Council"},{"@type":"Person","name":"María del Mar Arribas de Andrés - Madrid City Council"},{"@type":"Person","name":"Red.es"},{"@type":"Person","name":"IT Department, Santiago de Compostela City Council"},{"@type":"Person","name":"Innovation and Technological Development Service, A Coruña City Council},{"@type":"Person","name":"Víctor Morlán Pío - Zaragoza City Council"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://vocab.ciudadesabiertas.es/def/transporte/autobus#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://vocab.ciudadesabiertas.es/def/transporte/autobus#","name":"Vocabulary for the representation of data on public transport by bus.", "headline":"This vocabulary has been developed in the context of the action on open data of the project "Platform of Open, Collaborative and Interoperable Government" of the "II Call for Intelligent Cities" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Advancement of that ministry.", "datePublished":"2020-05-05", "version":"Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.", "license":"https://creativecommons.org/licenses/by/4.0", "author":[{"@type":"Person","name":"Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)"},{"@type":"Person","name":"Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)"}], "contributor":[{"@type":"Person","name":"Andrés Iglesias Pardo - Empresa Municipal de Transportes de Madrid"},{"@type":"Person","name":"Andrés Recio Martín - Empresa Municipal de Transportes de Madrid"},{"@type":"Person","name":"Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid"},{"@type":"Person","name":"José Antonio Chanca Cáceres - Ayuntamiento de Zaragoza"},{"@type":"Person","name":"María Carmen Ruiz Moreno - Ayuntamiento de Madrid"},{"@type":"Person","name":"María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza"},{"@type":"Person","name":"María Jesús Gallego San Miguel - Ayuntamiento de Madrid"},{"@type":"Person","name":"María del Mar Arribas de Andrés - Ayuntamiento de Madrid"},{"@type":"Person","name":"Red.es"},{"@type":"Person","name":"Servicio de Informática - Ayuntamiento de Santiago de Compostela"},{"@type":"Person","name":"Servicio de Innovación y Desarrollo Tecnológico - Ayuntamiento de A Coruña"},{"@type":"Person","name":"Víctor Morlán Pío - Ayuntamiento de Zaragoza"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -44,17 +42,19 @@ function loadTOC(){
 	  t+='</ul>';
 	  $("#toc").html(t); 
 }
- $.fn.ignore = function(sel){
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  }; 
    </script> 
   </head> 
 
-  <body>
-    <div class="container">
-      <div class="head">
-	<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
-<h1>Vocabulario para la representación de datos sobre el transporte público urbano de autobuses</h1>
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
+<h1>Vocabulary for the representation of data on public transport by bus.</h1>
 <h2>Release  2020-05-05</h2>
 
 
@@ -62,18 +62,18 @@ function loadTOC(){
 <dt>This version:</dt>
 <dd><a href="http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0">http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0</a></dd>
 <dt>Revision:</dt>
-<dd>Version 1.0 of the Traffic ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate.</dd>
+<dd>Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.</dd>
 <dt>Authors:</dt>
 <dd>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd><dd>Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd><dd>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)</dd><dd>Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd>
 
 <dt>Contributors:</dt>
-<dd>Honorio Enrique Crespo Díaz-Alejo - Madrid City Council</dd><dd>María Carmen Ruiz Moreno - Madrid City Council</dd><dd>María Jesús Fernández Ruiz - Zaragoza City Council</dd><dd>María Jesús Gallego San Miguel - Madrid City Council</dd><dd>María del Mar Arribas de Andrés -  Madrid City Council</dd><dd>Red.es</dd><dd>IT Service - Santiago de Compostela City Council</dd><dd>Innovation and Technological Development  - A Coruña City Council</dd><dd>Víctor Morlán Pío - Zaragoza City Council</dd>
+<dd>Andrés Iglesias Pardo - Empresa Municipal de Transportes de Madrid</dd><dd>Andrés Recio Martín - Empresa Municipal de Transportes de Madrid</dd><dd>Honorio Enrique Crespo Díaz-Alejo - Ayuntamiento de Madrid</dd><dd>José Antonio Chanca Cáceres - Ayuntamiento de Zaragoza</dd><dd>María Carmen Ruiz Moreno - Ayuntamiento de Madrid</dd><dd>María Jesús Fernández Ruiz - Ayuntamiento de Zaragoza</dd><dd>María Jesús Gallego San Miguel - Ayuntamiento de Madrid</dd><dd>María del Mar Arribas de Andrés - Ayuntamiento de Madrid</dd><dd>Red.es</dd><dd>Servicio de Informática - Ayuntamiento de Santiago de Compostela</dd><dd>Servicio de Innovación y Desarrollo Tecnológico - Ayuntamiento de A Coruña</dd><dd>Víctor Morlán Pío - Ayuntamiento de Zaragoza</dd>
 
 <dt>Publisher:</dt>
 <dd>Ontology Engineering Group - Universidad Politécnica de Madrid</dd>
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0" /></a>
-</dd><dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
-<dd>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid),Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid),Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata),Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid). Vocabulary for the representation of data on urban public bus transport. Revision: Version 1.0 of the Traffic ontology that has been implemented in the context of the project Open, collaborative and interoperable government platform in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate. Retrieved from: http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0" /></a>
+</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid),Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid),Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata),Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid). Vocabulary for the representation of data on public transport by bus.. Revision: Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.. Retrieved from: http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -82,9 +82,8 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div>
-<div id="abstract"><h2>Abstract</h2>
-  <p>This vocabulary has been developed in the context of the action on open data of the project "Platform of Open, Collaborative and Interoperable Government" of the "II Call for Intelligent Cities" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretary of State for Digital Advancement of that ministry.</p>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This vocabulary has been developed in the context of the action on open data of the project "Platform of Open, Collaborative and Interoperable Government" of the "II Call for Intelligent Cities" of the Ministry of Economy and Enterprise launched through the Public Business Entity Red.es assigned to the Secretariat of State for Digital Advancement of that ministry.</span>
 </div>
 <div id="toc">
   <ul>
@@ -107,7 +106,7 @@ function loadTOC(){
   <li>6. <a href="#acknowledgements">Acknowledgements</a></li>
 </ul>
 </div> 
-<!-- fin toc -->
+
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
       <p>This vocabulary represents the information of the urban bus public transport system. The transport systems of the four cities participating in the Open Cities project (A Coruña, Madrid, Santiago de Compostela and Zaragoza) have been analysed, as well as other cities with open data publication policies.</p>
@@ -115,47 +114,53 @@ function loadTOC(){
   <p>During 2019 OEG-UPM has participated in the project <a href="http://snap-project.eu">SNAP</a> to facilitate the compliance with the legislation through the conversion or generation of GTFS data in NeTeX, the Transmodel format, through the development of the ontology <a href="http://w3id.org/transmodel">Transmodel</a>, which has been taken into account for the development of this vocabulary.</p>
   <p>In general the following Transmodel concepts have been reused: Operator, Authority, Line, Route, Points on a Route, Trip Pattern, Points on a Trip Pattern, Stop, Trip associated to a Trip Pattern, Trip Schedules and Frequencies and Service Calendar. This vocabulary is related to the concept of Incidence in the Traffic vocabulary developed in the context of this project and also to the Postal Address and geosparql.</p> vocabularies.
 <p>The vocabulary has been divided into three main parts: (1) Operator and its lines, (2) Routes and stops and (3) Travel</p>
-      <div id="namespacedeclarations">
+<div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
 <table>
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
-    <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
-  <tr><td><b>direccion-postal</b></td><td>&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#&gt;</td></tr>
-  <tr><td><b>esautob</b></td><td>&lt;http://vocab.ciudadesabiertas.es/def/transporte/autobus#&gt;</td></tr>
-  <tr><td><b>estraf</b></td><td>&l;http://vocab.ciudadesabiertas.es/def/transporte/trafico#&gt;</td></tr>
-  <tr><td><b>geo</b></td><td>&lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;</td></tr>
-  <tr><td><b>geo-core</b></td><td>&lt;https://datos.ign.es/def/geo_core#&gt;</td></tr>
-  <tr><td><b>geosparql</b></td><td>&lt;http://www.opengis.net/ont/geosparql#&gt;</td></tr>
-  <tr><td><b>org</b></td><td>&lt;http://www.w3.org/ns/org#&gt;</td></tr>
-  <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-  <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
-  <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-  <tr><td><b>schema-org</b></td><td>&lt;http://schema.org/&gt;</td></tr>
-  <tr><td><b>sf</b></td><td>&lt;http://www.opengis.net/ont/sf#&gt;</td></tr>
-  <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
-  <tr><td><b>sosa</b></td><td>&lt;http://www.w3.org/ns/sosa#&gt;</td></tr>
-  <tr><td><b>spec</b></td><td>&lt;http://www.opengis.net/spec&gt;</td></tr>
-  <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
-  <tr><td><b>tmcommons</b></td><td>&lt;http://w3id.org/transmodel/commons#&gt;</td></tr>
-  <tr><td><b>tmkoscommons</b></td><td>&lt;http://w3id.org/transmodel/kos/commons/&gt;</td></tr>
-  <tr><td><b>tmkosjourney</b></td><td>&lt;http://w3id.org/transmodel/kos/journeys/&gt;</td></tr>
-  <tr><td><b>tmjourney</b></td><td>&lt;http://w3id.org/transmodel/journeys#&gt;</td></tr>
-  <tr><td><b>tmorg</b></td><td>&lt;http://w3id.org/transmodel/organisations#&gt;</td></tr>
-  <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
-  <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>esautob</b></td><td>&lt;http://vocab.ciudadesabiertas.es/def/transporte/autobus#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>direccion-postal</b></td><td>&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal&gt;</td></tr>
+<tr><td><b>tmkosjourney</b></td><td>&lt;http://w3id.org/transmodel/kos/journeys&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>esautob</b></td><td>&lt;http://vocab.ciudadesabiertas.es/def/transporte/autobus&gt;</td></tr>
+<tr><td><b>tmcommons</b></td><td>&lt;http://w3id.org/transmodel/commons&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>sosa1</b></td><td>&lt;http://www.w3.org/ns/sosa&gt;</td></tr>
+<tr><td><b>geo</b></td><td>&lt;http://www.w3.org/2003/01/geo/wgs84_pos&gt;</td></tr>
+<tr><td><b>sf</b></td><td>&lt;http://www.opengis.net/ont/sf&gt;</td></tr>
+<tr><td><b>dct</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>tmorg</b></td><td>&lt;http://w3id.org/transmodel/organisations&gt;</td></tr>
+<tr><td><b>sosa</b></td><td>&lt;http://w3.org/ns/sosa&gt;</td></tr>
+<tr><td><b>tmjourney</b></td><td>&lt;http://w3id.org/transmodel/journeys&gt;</td></tr>
+<tr><td><b>org</b></td><td>&lt;http://www.w3.org/ns/org&gt;</td></tr>
+<tr><td><b>vcard</b></td><td>&lt;http://www.w3.org/2006/vcard&gt;</td></tr>
+<tr><td><b>trafico</b></td><td>&lt;http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico&gt;</td></tr>
+<tr><td><b>geosparql</b></td><td>&lt;http://www.opengis.net/ont/geosparql&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>estraf</b></td><td>&lt;http://vocab.ciudadesabiertas.es/def/transporte/trafico&gt;</td></tr>
+<tr><td><b>geocore</b></td><td>&lt;https://datos.ign.es/def/geo_core&gt;</td></tr>
+<tr><td><b>escjr</b></td><td>&lt;http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero&gt;</td></tr>
+<tr><td><b>tmkoscommons</b></td><td>&lt;http://w3id.org/transmodel/kos/commons&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
+  
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">Vocabulario para la representación de datos sobre el transporte público urbano de autobuses.: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">Vocabulary for the representation of data on public transport by bus.: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>This ontology has the following classes and properties.</p>
 <h4>Classes</h4>
-<ul class="hlist">
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#http://w3id.org/transmodel/organisations#Authority"
          title="http://w3id.org/transmodel/organisations#Authority">Authority</a>
@@ -223,9 +228,6 @@ function loadTOC(){
    <li>
       <a href="#http://w3id.org/transmodel/journeys#LinkSequence"
          title="http://w3id.org/transmodel/journeys#LinkSequence">Link Sequence</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
@@ -317,10 +319,11 @@ function loadTOC(){
    <li>
       <a href="#http://w3id.org/transmodel/commons#Zone" title="http://w3id.org/transmodel/commons#Zone">Zone</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#http://w3id.org/transmodel/journeys#functionalCentroidFor"
-         title="http://w3id.org/transmodel/journeys#functionalCentroidFor">functionalCentroidFor</a>
+      <a href="#http://www.opengis.net/ont/geosparql#asWKT" title="http://www.opengis.net/ont/geosparql#asWKT">
+         <span>asWKT</span>
+      </a>
    </li>
    <li>
       <a href="#http://w3id.org/transmodel/organisations#characterisedBy"
@@ -343,10 +346,17 @@ function loadTOC(){
          title="http://w3id.org/transmodel/journeys#directionType">Direction Type</a>
    </li>
    <li>
+      <a href="#http://w3id.org/transmodel/commons#functionalCentroidFor"
+         title="http://w3id.org/transmodel/commons#functionalCentroidFor">functionalCentroidFor</a>
+   </li>
+   <li>
       <a href="#http://schema.org/address" title="http://schema.org/address">Has Address</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has Feature Of Interest</a>
+   </li>
+   <li>
+      <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
    </li>
    <li>
       <a href="#http://w3id.org/transmodel/journeys#includedIn" title="http://w3id.org/transmodel/journeys#includedIn">Included In</a>
@@ -417,7 +427,7 @@ function loadTOC(){
    <li>
       <a href="#http://w3id.org/transmodel/journeys#workedOn" title="http://w3id.org/transmodel/journeys#workedOn">worked On</a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista"
          title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista">(expected) end date</a>
@@ -426,10 +436,20 @@ function loadTOC(){
       <a href="#http://schema.org/startDate" title="http://schema.org/startDate">(expected) start date</a>
    </li>
    <li>
+      <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto"
+         title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto">attached to incidence</a>
+   </li>
+   <li>
       <a href="#http://w3id.org/transmodel/commons#colour" title="http://w3id.org/transmodel/commons#colour">colour</a>
    </li>
    <li>
       <a href="#http://w3id.org/transmodel/journeys#date" title="http://w3id.org/transmodel/journeys#date">Date</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/dateCreated" title="http://schema.org/dateCreated">Date created</a>
+   </li>
+   <li>
+      <a href="#http://schema.org/datePosted" title="http://schema.org/datePosted">Date posted</a>
    </li>
    <li>
       <a href="#http://w3id.org/transmodel/journeys#departureTime"
@@ -528,9 +548,6 @@ function loadTOC(){
       <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">Phenomenon Time</a>
    </li>
    <li>
-      <a href="#http://schema.org/datePosted" title="http://schema.org/datePosted">posted incidence date</a>
-   </li>
-   <li>
       <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia"
          title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia">Recurrence</a>
    </li>
@@ -579,7 +596,7 @@ function loadTOC(){
       <a href="#zona"
          title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#zona">Zone</a>
    </li>
-</ul><h4>Named Individuals</h4><ul class="hlist">
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#http://w3id.org/transmodel/kos/journeys/day-type"
          title="http://w3id.org/transmodel/kos/journeys/day-type">day type</a>
@@ -598,10 +615,10 @@ function loadTOC(){
    </li>
 </ul>
 </div>
-<!-- fin overview -->
+  
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">Vocabulario para la representación de datos sobre el transporte público urbano de autobuses.: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">Vocabulary for the representation of data on public transport by bus.: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
         <p>This vocabulary represents the information of the urban public bus service which includes the authorities and transport operators, the lines of the urban public bus service, the routes of the lines, the stops and the incidents of the service </p>
   <p>The scope of this vocabulary is defined in two types of information:</p>
   <ul>
@@ -934,11 +951,11 @@ function loadTOC(){
       </pre>
       <ul>
 	<li>Each stop may have an URL <a href="http://schema.org/url">schema:url</a>.</li>
-	<li>It has an identifier <a href="http://purl.org/dc/terms/id">dcterms:id</a>, usually the number of the stop in the transport network.</li>
+	<li>It has an identifier <a href="http://purl.org/dc/terms/id">dcterms:id</a>, usually the number of the stop in the xotransport network.</li>
 	<li>It also has a description <a href="http://purl.org/dc/terms/description">dcterms:description</a>.</li>
 	<li>A name <a href="http://schema.org/name">schema:name</a>.</li>
 	<li>Information on whether it has WiFi <a href="#wifi">esautob:wifi</a> available or an electronic information panel <a href="#panelElectronico">#esautob:panelElectronico</a>.</li>
-	<li>What area <a href=#zona">esautob:zona</a> of the transport network it belongs.</li>
+	<li>What area <a href="#zona">esautob:zona</a> of the transport network it belongs.</li>
 	<li>As a subclass of Feature <a href="http://www.opengis.net/ont/geosparql#Feature">geosparql:Feature</a>, it has geometry <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geosparql:hasGeometry</a> that points to a geographical Point <a href="http://opengis.net/ont/sf#Point">sf:Point</a>.</li>
 	<li>Finally, a postal address through <a href="http://schema.org/address">schema:address</a>.</li>
       </ul>
@@ -1047,13 +1064,14 @@ function loadTOC(){
 
 </div>
 <!-- fin ejemplos-uso -->
+
 </div>
-<!-- fin description -->
+   
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<p>This section introduces more details about each class and property defined by Vocabulary for the representation of data on urban public bus transport.</p>
-<div id="classes">
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Vocabulary for the representation of data on public transport by bus. classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>This section provides details for each class and property defined by Vocabulary for the representation of data on public transport by bus.<p>
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
@@ -1123,9 +1141,6 @@ function loadTOC(){
       <li>
          <a href="#http://w3id.org/transmodel/journeys#LinkSequence"
             title="http://w3id.org/transmodel/journeys#LinkSequence">Link Sequence</a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
@@ -1245,8 +1260,6 @@ function loadTOC(){
          <dd>
             <a href="#http://w3id.org/transmodel/organisations#Operator"
                title="http://w3id.org/transmodel/organisations#Operator">Operator</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://w3id.org/transmodel/organisations#Organisation"
-               title="http://w3id.org/transmodel/organisations#Organisation">Organisation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1545,6 +1558,19 @@ function loadTOC(){
             <pre>When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator.</pre>
          </dd>
       </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/transmodel/journeys#PointInLinkSequence"
+               title="http://w3id.org/transmodel/journeys#PointInLinkSequence">Point in Link Sequence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has Feature Of Interest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/sf#Point">
       <h3>Geographic Point<sup class="type-c" title="class">c</sup>
@@ -1605,6 +1631,16 @@ function loadTOC(){
          <dd>
             <a href="#http://www.opengis.net/ont/sf#Point" title="http://www.opengis.net/ont/sf#Point">Geographic Point</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#asWKT" title="http://www.opengis.net/ont/geosparql#asWKT">asWKT</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1695,13 +1731,12 @@ function loadTOC(){
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://schema.org/startDate" title="http://schema.org/startDate">(expected) start date</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos"
+            <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos"
                title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos">Street directions</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles"
                title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles">Traffic lanes</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/endDate" title="http://schema.org/endDate">end date</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/datePosted" title="http://schema.org/datePosted">posted incidence date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto"
+               title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto">attached to incidence</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -1716,8 +1751,6 @@ function loadTOC(){
          <dd>
             <a href="#Parada"
                title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#Parada">Stop Place</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Parada">parada</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1741,7 +1774,9 @@ function loadTOC(){
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://w3id.org/transmodel/journeys#prescribing" title="http://w3id.org/transmodel/journeys#prescribing">Prescribing</a>
+            <a href="#generadoPorIncidencia"
+               title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#generadoPorIncidencia">JourneyPattern generated by an Incidenceline affected by an incidence</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/transmodel/journeys#prescribing" title="http://w3id.org/transmodel/journeys#prescribing">Prescribing</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/transmodel/journeys#on" title="http://w3id.org/transmodel/journeys#on">on</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1813,32 +1848,6 @@ function loadTOC(){
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://www.w3.org/ns/sosa/ObservableProperty">
-      <h3>Observable Property<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservableProperty</p>
-      <div class="comment">
-         <span class="markdown">An observable quality (property, characteristic) of a FeatureOfInterest.</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">An observable quality (property, characteristic) of a FeatureOfInterest.</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
-         </dd>
-      </dl>
-      <dl>
-         <dt>Example</dt>
-         <dd>
-            <pre>The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted.</pre>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://www.w3.org/ns/sosa/Observation">
       <h3>Observation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1870,6 +1879,13 @@ function loadTOC(){
             <a href="#RealTimePassingTime"
                title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#RealTimePassingTime">Waiting Time</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">Phenomenon Time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has Feature Of Interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1937,16 +1953,9 @@ function loadTOC(){
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://schema.org/contactPoint" title="http://schema.org/contactPoint">Contact Point</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/transmodel/organisations#characterisedBy"
+            <a href="#http://w3id.org/transmodel/organisations#characterisedBy"
                title="http://w3id.org/transmodel/organisations#characterisedBy">characterised by</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#http://w3id.org/transmodel/organisations#Authority"
-               title="http://w3id.org/transmodel/organisations#Authority">Authority</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -2051,8 +2060,8 @@ function loadTOC(){
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://w3id.org/transmodel/journeys#functionalCentroidFor"
-               title="http://w3id.org/transmodel/journeys#functionalCentroidFor">functionalCentroidFor</a>
+            <a href="#http://w3id.org/transmodel/commons#functionalCentroidFor"
+               title="http://w3id.org/transmodel/commons#functionalCentroidFor">functionalCentroidFor</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -2099,7 +2108,10 @@ function loadTOC(){
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#http://w3id.org/transmodel/journeys#PointInJourneyPattern"
@@ -2120,8 +2132,7 @@ function loadTOC(){
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has Feature Of Interest</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/transmodel/journeys#madeUsing" title="http://w3id.org/transmodel/journeys#madeUsing">made Using</a>
+            <a href="#http://w3id.org/transmodel/journeys#madeUsing" title="http://w3id.org/transmodel/journeys#madeUsing">made Using</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -2153,7 +2164,7 @@ function loadTOC(){
       <p>
          <strong>IRI:</strong> http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal</p>
       <div class="comment">
-         <span class="markdown">A postal address according to the direccion-postal vocabulary.</span>
+         <span class="markdown">A postal address according to the esdir vocabulary.</span>
       </div>
       <dl class="description">
          <dt>is in range of</dt>
@@ -2288,6 +2299,13 @@ function loadTOC(){
             <pre>Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes.</pre>
          </dd>
       </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="http://w3id.org/transmodel/journeys#ServiceCalendar">
       <h3>ServiceCalendar<sup class="type-c" title="class">c</sup>
@@ -2384,8 +2402,7 @@ function loadTOC(){
          <dd>
             <a href="#panelElectronico"
                title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#panelElectronico">Electronic Information Panel</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://schema.org/address" title="http://schema.org/address">Has Address</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#wifi"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#wifi"
                title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#wifi">WiFi</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -2504,9 +2521,7 @@ function loadTOC(){
          <dd>
             <a href="#expectedArrivalTime"
                title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#expectedArrivalTime">Expected Arrival Time</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">Phenomenon Time</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has Feature Of Interest</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -2526,14 +2541,21 @@ function loadTOC(){
             <a href="#http://w3id.org/transmodel/commons#Place" title="http://w3id.org/transmodel/commons#Place">Place</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://w3id.org/transmodel/commons#functionalCentroidFor"
+               title="http://w3id.org/transmodel/commons#functionalCentroidFor">functionalCentroidFor</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
-</div><div id="objectproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://w3id.org/transmodel/journeys#functionalCentroidFor"
-            title="http://w3id.org/transmodel/journeys#functionalCentroidFor">functionalCentroidFor</a>
+         <a href="#http://www.opengis.net/ont/geosparql#asWKT" title="http://www.opengis.net/ont/geosparql#asWKT">
+            <span>asWKT</span>
+         </a>
       </li>
       <li>
          <a href="#http://w3id.org/transmodel/organisations#characterisedBy"
@@ -2556,10 +2578,17 @@ function loadTOC(){
             title="http://w3id.org/transmodel/journeys#directionType">Direction Type</a>
       </li>
       <li>
+         <a href="#http://w3id.org/transmodel/commons#functionalCentroidFor"
+            title="http://w3id.org/transmodel/commons#functionalCentroidFor">functionalCentroidFor</a>
+      </li>
+      <li>
          <a href="#http://schema.org/address" title="http://schema.org/address">Has Address</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has Feature Of Interest</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
       </li>
       <li>
          <a href="#http://w3id.org/transmodel/journeys#includedIn" title="http://w3id.org/transmodel/journeys#includedIn">Included In</a>
@@ -2631,32 +2660,22 @@ function loadTOC(){
          <a href="#http://w3id.org/transmodel/journeys#workedOn" title="http://w3id.org/transmodel/journeys#workedOn">worked On</a>
       </li>
    </ul>
-   <div class="entity" id="http://w3id.org/transmodel/journeys#functionalCentroidFor">
-      <h3>functionalCentroidFor<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#asWKT">
+      <h3>asWKT<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://w3id.org/transmodel/journeys#functionalCentroidFor</p>
-      <div class="comment">
-         <span class="markdown">This property allows connecting a Point with a Zone.</span>
-      </div>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#asWKT</p>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
-            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://w3id.org/transmodel/journeys#Point" title="http://w3id.org/transmodel/journeys#Point">Point</a>
+               <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://w3id.org/transmodel/journeys#Zone">zone</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
          </dl>
       </div>
    </div>
@@ -2675,7 +2694,9 @@ function loadTOC(){
             <dt>has super-properties</dt>
             <dd>
                <a href="#http://schema.org/contactPoint" title="http://schema.org/contactPoint">Contact Point</a>
-               <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <sup class="type-op" title="object property">op</sup>, <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -2733,19 +2754,15 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#http://w3id.org/transmodel/organisations#characterisedBy"
                   title="http://w3id.org/transmodel/organisations#characterisedBy">characterised by</a>
                <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://w3id.org/transmodel/organisations#Organisation"
-                  title="http://w3id.org/transmodel/organisations#Organisation">Organisation</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -2823,7 +2840,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -2837,8 +2856,40 @@ function loadTOC(){
                <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">It is in Scheme</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
-               <span class="dotted"
-                     title="http://w3id.org/transmodel/kos/journeys/direction-type">direction type</span>)</dd>
+               <a href="http://w3id.org/transmodel/kos/journeys/direction-type"
+                  target="_blank"
+                  title="http://w3id.org/transmodel/kos/journeys/direction-type">direction type</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://w3id.org/transmodel/commons#functionalCentroidFor">
+      <h3>functionalCentroidFor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/transmodel/commons#functionalCentroidFor</p>
+      <div class="comment">
+         <span class="markdown">This property allows connecting a Point with a Zone.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://w3id.org/transmodel/journeys#Point" title="http://w3id.org/transmodel/journeys#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://w3id.org/transmodel/commons#Zone" title="http://w3id.org/transmodel/commons#Zone">Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -2856,13 +2907,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Parada"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#Parada">Stop Place</a>
-               <sup class="type-c" title="class">c</sup>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -2887,18 +2934,46 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#RealTimePassingTime"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#RealTimePassingTime">Waiting Time</a>
+               <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://w3id.org/transmodel/journeys#PointInLinkSequence"
-                  title="http://w3id.org/transmodel/journeys#PointInLinkSequence">Point in Link Sequence</a>
+               <a href="#http://www.w3.org/ns/sosa/FeatureOfInterest" title="http://www.w3.org/ns/sosa/FeatureOfInterest">Feature Of Interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#hasGeometry">
+      <h3>hasGeometry<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#hasGeometry</p>
+      <div class="comment">
+         <span class="markdown">A spatial representation for a given feature.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd/>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2918,7 +2993,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -2954,7 +3031,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -2985,10 +3064,16 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
-            <dd/>
+            <dd>
+               <a href="#http://w3id.org/transmodel/journeys#JourneyPattern"
+                  title="http://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
@@ -3018,7 +3103,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd/>
@@ -3051,7 +3138,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3088,7 +3177,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3125,14 +3216,12 @@ function loadTOC(){
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted"
-                     title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico">observacion trafico</span>
+               <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico">dispositivo medicion trafico</span>
+               <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3152,7 +3241,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
          </dl>
       </div>
@@ -3171,7 +3262,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3204,22 +3297,6 @@ function loadTOC(){
             <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
          </dd>
       </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#ObservacionTrafico">observacion trafico</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico">propiedad medicion trafico</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="http://www.w3.org/ns/sosa/observes">
       <h3>observes<sup class="type-op" title="object property">op</sup>
@@ -3237,22 +3314,6 @@ function loadTOC(){
             <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
          </dd>
       </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#DispositivoMedicionTrafico">dispositivo medicion trafico</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#PropiedadMedicionTrafico">propiedad medicion trafico</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="http://w3id.org/transmodel/journeys#on">
       <h3>on<sup class="type-op" title="object property">op</sup>
@@ -3268,7 +3329,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3298,7 +3361,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3328,7 +3393,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3384,7 +3451,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3415,7 +3484,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3445,7 +3516,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3460,8 +3533,9 @@ function loadTOC(){
                <span class="logic">and</span> (<a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">It is in Scheme</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
-               <span class="dotted"
-                     title="http://w3id.org/transmodel/kos/journeys/stop-use-type">stop use type</span>)</dd>
+               <a href="http://w3id.org/transmodel/kos/journeys/stop-use-type"
+                  target="_blank"
+                  title="http://w3id.org/transmodel/kos/journeys/stop-use-type">stop use type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -3479,7 +3553,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3510,7 +3586,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3540,7 +3618,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3556,7 +3636,7 @@ function loadTOC(){
          </dl>
       </div>
    </div>
-</div><div id="dataproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
@@ -3567,10 +3647,20 @@ function loadTOC(){
          <a href="#http://schema.org/startDate" title="http://schema.org/startDate">(expected) start date</a>
       </li>
       <li>
+         <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto"
+            title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto">attached to incidence</a>
+      </li>
+      <li>
          <a href="#http://w3id.org/transmodel/commons#colour" title="http://w3id.org/transmodel/commons#colour">colour</a>
       </li>
       <li>
          <a href="#http://w3id.org/transmodel/journeys#date" title="http://w3id.org/transmodel/journeys#date">Date</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/dateCreated" title="http://schema.org/dateCreated">Date created</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/datePosted" title="http://schema.org/datePosted">Date posted</a>
       </li>
       <li>
          <a href="#http://w3id.org/transmodel/journeys#departureTime"
@@ -3669,9 +3759,6 @@ function loadTOC(){
          <a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">Phenomenon Time</a>
       </li>
       <li>
-         <a href="#http://schema.org/datePosted" title="http://schema.org/datePosted">posted incidence date</a>
-      </li>
-      <li>
          <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia"
             title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia">Recurrence</a>
       </li>
@@ -3748,7 +3835,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -3761,12 +3850,39 @@ function loadTOC(){
       <p>
          <strong>IRI:</strong> http://schema.org/startDate</p>
       <div class="comment">
-         <span class="markdown">The start date and time of an incidence (in ISO 8601 date format).</span>
+         <span class="markdown">The start date or start date and time in ISO 8601 date format.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
             <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto">
+      <h3>attached to incidence<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://vocab.ciudadesabiertas.es/def/transporte/trafico#incidenciaAdjunto</p>
+      <div class="comment">
+         <span class="markdown">A document where more information about the incidence can be found.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico">http://vocab.ciudadesabiertas.es/def/transporte/trafico</a>
          </dd>
       </dl>
       <div class="description">
@@ -3779,7 +3895,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
       </div>
@@ -3803,7 +3921,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3822,7 +3942,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3832,7 +3954,63 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/dateCreated">
+      <h3>Date created<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/dateCreated</p>
+      <div class="comment">
+         <span class="markdown">The end date or end date and time in ISO 8601 date format.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/datePosted">
+      <h3>Date posted<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/datePosted</p>
+      <div class="comment">
+         <span class="markdown">The end date or date and time in ISO 8601 date format.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -3851,7 +4029,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3861,7 +4041,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -3884,32 +4066,11 @@ function loadTOC(){
       </dl>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Parada"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#Parada">Stop Place</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/commons#Zone" title="http://w3id.org/transmodel/commons#Zone">Zone</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#DayType" title="http://w3id.org/transmodel/journeys#DayType">DayType</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#DayTypeAssignment"
-                  title="http://w3id.org/transmodel/journeys#DayTypeAssignment">DayTypeAssignment</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#Route" title="http://w3id.org/transmodel/journeys#Route">Route</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#ServiceCalendar"
-                  title="http://w3id.org/transmodel/journeys#ServiceCalendar">ServiceCalendar</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -3928,7 +4089,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3938,7 +4101,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
             </dd>
          </dl>
       </div>
@@ -3957,7 +4122,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3967,7 +4134,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#double">double</span>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
             </dd>
          </dl>
       </div>
@@ -3997,7 +4166,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4016,7 +4187,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4025,7 +4198,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4044,7 +4219,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4054,7 +4231,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -4067,7 +4246,7 @@ function loadTOC(){
       <p>
          <strong>IRI:</strong> http://schema.org/endDate</p>
       <div class="comment">
-         <span class="markdown">The end date and time of an incidence (in ISO 8601 date format).</span>
+         <span class="markdown">The end date or date and time of an incidence in ISO 8601 date format).</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -4077,15 +4256,11 @@ function loadTOC(){
       </dl>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia">Incidence</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4104,7 +4279,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4114,7 +4291,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span>
+               <a href="http://www.w3.org/2001/XMLSchema#duration"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
             </dd>
          </dl>
       </div>
@@ -4133,7 +4312,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4143,7 +4324,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4162,7 +4345,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4172,7 +4357,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -4191,7 +4378,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4201,7 +4390,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -4220,7 +4411,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4230,7 +4423,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span>
+               <a href="http://www.w3.org/2001/XMLSchema#date"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#date">date</a>
             </dd>
          </dl>
       </div>
@@ -4255,7 +4450,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4278,44 +4475,11 @@ function loadTOC(){
       </dl>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Parada"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#Parada">Stop Place</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/commons#Zone" title="http://w3id.org/transmodel/commons#Zone">Zone</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#DayType" title="http://w3id.org/transmodel/journeys#DayType">DayType</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#DayTypeAssignment"
-                  title="http://w3id.org/transmodel/journeys#DayTypeAssignment">DayTypeAssignment</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#HeadwayInterval"
-                  title="http://w3id.org/transmodel/journeys#HeadwayInterval">Headway Interval</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#LinkSequence"
-                  title="http://w3id.org/transmodel/journeys#LinkSequence">Link Sequence</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#PointInLinkSequence"
-                  title="http://w3id.org/transmodel/journeys#PointInLinkSequence">Point in Link Sequence</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#StopArea" title="http://w3id.org/transmodel/journeys#StopArea">Stop Area</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#VehicleJourney"
-                  title="http://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4334,7 +4498,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4344,7 +4510,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -4363,7 +4531,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4373,7 +4543,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4392,7 +4564,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4402,7 +4576,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4421,7 +4597,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4431,7 +4609,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4455,7 +4635,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
@@ -4479,7 +4661,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
@@ -4498,7 +4682,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4508,7 +4694,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4527,7 +4715,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4537,7 +4727,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4550,7 +4742,7 @@ function loadTOC(){
       <p>
          <strong>IRI:</strong> http://schema.org/name</p>
       <div class="comment">
-         <span class="markdown">Name</span>
+         <span class="markdown">Name of an entity.</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -4560,35 +4752,11 @@ function loadTOC(){
       </dl>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Parada"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#Parada">Stop Place</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/commons#Zone" title="http://w3id.org/transmodel/commons#Zone">Zone</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#DayType" title="http://w3id.org/transmodel/journeys#DayType">DayType</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#Line" title="http://w3id.org/transmodel/journeys#Line">Line</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#LinkSequence"
-                  title="http://w3id.org/transmodel/journeys#LinkSequence">Link Sequence</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#ServiceCalendar"
-                  title="http://w3id.org/transmodel/journeys#ServiceCalendar">ServiceCalendar</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#StopArea" title="http://w3id.org/transmodel/journeys#StopArea">Stop Area</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4618,7 +4786,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4631,7 +4801,7 @@ function loadTOC(){
       <p>
          <strong>IRI:</strong> http://schema.org/legalName</p>
       <div class="comment">
-         <span class="markdown">Legal Name</span>
+         <span class="markdown">Legal Name of an entity</span>
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
@@ -4648,7 +4818,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4667,7 +4839,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4677,8 +4851,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+               <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</a>
             </dd>
          </dl>
       </div>
@@ -4697,48 +4872,20 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#RealTimePassingTime"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#RealTimePassingTime">Waiting Time</a>
+               <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://schema.org/datePosted">
-      <h3>posted incidence date<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://schema.org/datePosted</p>
-      <div class="comment">
-         <span class="markdown">The end date and time of the incidence (in ISO 8601 date format).</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://schema.org/">http://schema.org/</a>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia">Incidence</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4757,7 +4904,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4767,7 +4916,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4787,7 +4938,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4797,7 +4950,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -4816,7 +4971,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4826,7 +4983,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -4845,7 +5004,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4854,7 +5015,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4885,7 +5048,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
          </dl>
       </div>
@@ -4915,7 +5080,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4939,7 +5106,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
@@ -4958,7 +5127,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4968,7 +5139,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span>
+               <a href="http://www.w3.org/2001/XMLSchema#date"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#date">date</a>
             </dd>
          </dl>
       </div>
@@ -4999,7 +5172,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
          </dl>
       </div>
@@ -5022,24 +5197,11 @@ function loadTOC(){
       </dl>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://schema.org/ContactPoint" title="http://schema.org/ContactPoint">Contact Point</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#Parada"
-                  title="http://vocab.ciudadesabiertas.es/def/transporte/autobus#Parada">Stop Place</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#Line" title="http://w3id.org/transmodel/journeys#Line">Line</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#http://w3id.org/transmodel/journeys#Route" title="http://w3id.org/transmodel/journeys#Route">Route</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</a>
             </dd>
          </dl>
       </div>
@@ -5058,7 +5220,9 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -5068,7 +5232,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
             </dd>
          </dl>
       </div>
@@ -5092,7 +5258,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
@@ -5116,7 +5284,9 @@ function loadTOC(){
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
             </dd>
          </dl>
       </div>
@@ -5135,18 +5305,22 @@ function loadTOC(){
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
             <dt>has domain</dt>
             <dd/>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>
    </div>
-</div><div id="namedindividuals">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
@@ -5254,12 +5428,37 @@ function loadTOC(){
 <!--REFERENCES SECTION-->
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+<p>The vocabulary of the urban public bus transport service mainly uses the modules of the <a href="https://w3id.org/transmodel">Transmodel vocabulary</a>, relies on other vocabularies (sosa, geo, kos and organization) as well as creating some ad hoc classes and properties.</p>
+<p>In particular, from <a href="https://w3id.org/transmodel">Transmodel</a> the following vocabularies have been reused:</p>
+<ul>
+  <li><a href="https://oeg-upm.github.io/snap-docs/tm-commons.owl/documentation/index-en.html">Commons</a>, <a href="https://w3id.org/transmodel/commons#">tmcommons</a>, to represent some common concepts and properties of the Transmodel modules.</li>
+  <li><a href="https://oeg-upm.github.io/snap-docs/tm-journeys.owl/documentation/index-en.html">Journeys</a>, <a href="https://w3id.org/transmodel/journeys#">tmjourneys</a>, to represent the information related to journeys.</li>
+  <li><a href="https://oeg-upm.github.io/snap-docs/tm-organisations.owl/documentation/index-en.html">Organisations</a>, <a href="https://w3id.org/transmodel/organisations#">tmorg</a>, to represent the information relate to the organisations that participate in the urban bus public transport system</a>.</li>
+</ul>
+<p>The other vocabularies that have been employed are:</p>
+<ul>
+  <li>To represent taxonomies, <a href="https://www.w3.org/2004/02/skos/">SKOS</a> (Simple Knowledge Organization System), in particular:
+    <ul>
+      <li><a href="http://w3id.org/transmodel/kos/commons">tmkoscommons</a> for common taxonomies.</li>
+      <li><a href="http://w3id.org/transmodel/kos/journeys/">tmkosjourney</a> for journey taxonomies.</li>
+    </ul>
+  </li>
+  <li>For the geographic representation of data there have been reused the following vocabularies:
+    <ul>
+      <li><a href="http://www.w3.org/2003/01/geo/wgs84_pos#">geo</a>, for the latitude and longitude properties in WGS84.</li>
+      <li><a href="https://datos.ign.es/def/geo_core#">geo_core</a>, for the latitude and longitude properties in ETRS89.</li>
+      <li><a href="http://www.opengis.net/ont/geosparql#">geosparql</a> for the geographic representation of the three entities.</li>
+      <li><a href="http://www.opengis.net/ont/sf#">sf</a> (Simple Features Geometries), for the representation of the geographic <a href="#http://www.opengis.net/ont/sf#Point">sf:Point</a>.</li>
+      </ul>
+  <li>For some bus or route values, the sensor vocabulary <a href="https://w3c.github.io/sdw/ssn/#">SOSA</a> (Semantic Sensor Network Ontology) has been reused.</li>
+  <li>The <a href="https://github.com/CiudadesAbiertas/vocab-transporte-trafico">Traffic</a> vocabulary has been reused <a href="http://vocab.ciudadesabiertas.es/def/transporte/trafico#">estraf</a> for incidents.</li>
+  <li>For the stop address the street vocabulary <a href="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#">escjr</a> has been reused.</li>
+  <li>For transport organisations the <a href="http://www.w3.org/ns/org#">org</a> vocabulary has been reused.</li>
+</ul>
 
 </div>
-<div id="acknowledgements">
-<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation; to <a href="http://purl.org/net/mpoveda">María Poveda</a> for developing <a href="http://oops.linkeddata.es/">Oops</a> (OntOlogy Pitfall Scanner), the software used to detect common pitfails in the ontology; to <a href="https://www.w3.org/People/Eric/">Eric Prudhommeaux</a> for its <a href="https://www.w3.org/RDF/Validator/">validation RDF service</a>; to IDLab - Ghent University for its <a href="https://github.com/IDLabResearch/TurtleValidator">Turtle validator</a>.</p>
 </div>
