@@ -98,9 +98,9 @@ The vocabulary has been divided into three main parts:
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/abstract -->
+    <!-- http://purl.org/dc/terms/abstract -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 
