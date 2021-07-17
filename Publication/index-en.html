@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Vocabulary for the representation of data on public transport by bus.</title>
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Vocabulary for the representation of urban public bus transport data.</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
@@ -54,15 +54,15 @@ $(function(){
 <div class="container">
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
-<h1>Vocabulary for the representation of data on public transport by bus.</h1>
-<h2>Release  2020-05-05</h2>
+<h1>Vocabulary for the representation of urban public bus transport data</h1>
+<h2>Release  2021-07-15</h2>
 
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0">http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0</a></dd>
+<dd><a href="http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.1.0">http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.1.0</a></dd>
 <dt>Revision:</dt>
-<dd>Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.</dd>
+<dd>Version 1.1.0 of the Bus ontology that has been implemented in the context of the project Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable in which the city councils of Madrid, Zaragoza, Santiago de Compostela and A Coruña participate.</dd>
 <dt>Authors:</dt>
 <dd>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd><dd>Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd><dd>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata)</dd><dd>Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd>
 
@@ -72,7 +72,7 @@ $(function(){
 <dt>Publisher:</dt>
 <dd>Ontology Engineering Group - Universidad Politécnica de Madrid</dd>
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD logo" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML logo" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples logo" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL logo" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0-blue.svg" alt="CC BY 4.0 License https://creativecommons.org/licenses/by/4.0" /></a>
-</dd><dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluated with OOPS!" /></a></dd><dt>Cite as:</dt>
+</dd><dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluated with OOPS!" /></a></dd><dt>Cite as:</dt>
 <dd>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid),Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid),Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata),Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid). Vocabulary for the representation of data on public transport by bus.. Revision: Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.. Retrieved from: http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0</dd>
 </dl>
 
@@ -661,7 +661,7 @@ This vocabulary has been developed in the context of the action on open data of 
   <!-- fin patron-geo -->
   
   <div id="patron-sosa">
-    <h3 id="patron-sosa-headline" class="list">Patrón SOSA<span class="backlink">back to <a href="#toc">índice</a></span></h3>
+    <h3 id="patron-sosa-headline" class="list">SOSA Pattern<span class="backlink">back to <a href="#toc">índice</a></span></h3>
 
     <p>To represent the passing time of the next vehicle it has been created the new class <a href="#RealTimePassingTime">esautob:RealTimePassingTime</a> that, as a subclass of <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a> has the feature of interest <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a> the point in link sequence <a href="http://w3id.org/transmodel/journeys#PointInLinkSequence">tmjourney:PointInLinkSequence</a>, the superclass of Route <a href="http://w3id.org/transmodel/journeys#Route">tmjourney:Route</a> and <a href="http://w3id.org/transmodel/journeys#JourneyPattern">tmjourney:JourneyPattern</a>.</p>
     
