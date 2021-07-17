@@ -71,8 +71,8 @@ $(function(){
 
 <dt>Publisher:</dt>
 <dd>Ontology Engineering Group - Universidad Politécnica de Madrid</dd>
-<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0" /></a>
-</dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD logo" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML logo" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples logo" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL logo" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0-blue.svg" alt="CC BY 4.0 License https://creativecommons.org/licenses/by/4.0" /></a>
+</dd><dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluated with OOPS!" /></a></dd><dt>Cite as:</dt>
 <dd>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid),Edna Ruckhaus (Ontology Engineering Group - Universidad Politécnica de Madrid),Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid, Localidata),Paola Espinoza Arias (Ontology Engineering Group - Universidad Politécnica de Madrid). Vocabulary for the representation of data on public transport by bus.. Revision: Versión 1.0 de la ontología de Autobús que ha sido implementada en el contexto del proyecto Ciudades Abiertas: Plataforma de gobierno abierto, colaborativa e interoperable en la que participan los ayuntamientos de Madrid, Zaragoza, Santiago de Compostela y A Coruña.. Retrieved from: http://vocab.ciudadesabiertas.es/def/transporte/autobus/1.0.0</dd>
 </dl>
 
@@ -157,7 +157,7 @@ This vocabulary has been developed in the context of the action on open data of 
   
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">Vocabulary for the representation of data on public transport by bus.: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>This ontology has the following classes and properties.</p>
 <h4>Classes</h4>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
@@ -618,7 +618,7 @@ This vocabulary has been developed in the context of the action on open data of 
   
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">Vocabulary for the representation of data on public transport by bus.: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
         <p>This vocabulary represents the information of the urban public bus service which includes the authorities and transport operators, the lines of the urban public bus service, the routes of the lines, the stops and the incidents of the service </p>
   <p>The scope of this vocabulary is defined in two types of information:</p>
   <ul>
@@ -631,11 +631,11 @@ This vocabulary has been developed in the context of the action on open data of 
   <p> In this case, <a href="#http://w3id.org/transmodel/organisations#Organisation">tmorg:Organisation</a> is a subclass of org:Organization which has the subclasses <a href="#Operator">tmorg:Operator</a> for transport operators and <a href="#http://w3id.org/transmodel/organisations#Authority">tmorg:Authority</a> for transport authorities.</p>
       <p>It is the operator company that operates a <a href="#http://w3id.org/transmodel/journeys#Line">tmjourney:Line</a>, in this case the new subclass <a href="#Line">esautob:Line</a> has been created to relate them to the incidents <a href="#http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia">estraf:Incidencia</a>   of the traffic vocabulary through the property <a href="#afectadaPorIncidencia">esautob:afectadaPorIncidencia</a>.
   <p>The lines are composed of <a href="#http://w3id.org/transmodel/journeys#madeUpOf">tmjourney:madeUpOf</a> routes <a href="#http://w3id.org/transmodel/journeys#Route">tmjourney:Route</a>, which is where the journey patterns  <a href="#http://w3id.org/transmodel/journeys#JourneyPattern">tmjourney:JourneyPattern</a> work on <a href="#http://w3id.org/transmodel/journeys#on">tmjourney:on</a>.</p>
-    <div><center><img src="resources/images/vocabulario-autobus.png" alt="Diagrama del vocabulario de autobús de la iniciativa Ciudades Abiertas"/><figcaption>Figure 1. - Open Cities Initiative Bus Vocabulary Diagram.</figcaption></center></div>
+    <div><center><img src="resources/images/vocabulario-autobus.png" alt="Open Cities Initiative Bus Vocabulary Diagram"/><figcaption>Figure 1. - Open Cities Initiative Bus Vocabulary Diagram.</figcaption></center></div>
 
     <div id="link-sequence">
     <h3 id="link-sequence-headline" class="list">Link Sequence<span class="backlink">back to <a href="#toc">índice</a></span></h3>
-    <p>Open Cities Initiative Bus Vocabulary DiagramOne of the richest concepts in Transmodel is that of routes. To explain this, this diagram shows how the information on a route is represented. As it appeared in the previous diagram, a journey pattern <a href="#http://w3id.org/transmodel/journeys#JourneyPattern">tmjourney:JourneyPattern</a> works in a Route <a href="#http://w3id.org/transmodel/journeys#Route">tmjourney:Route</a>. But in addition, both classes are subclasses of a sequence of links <a href="#http://w3id.org/transmodel/journeys#LinkSequence">tmjourney:LinkSequence</a>.</p>
+    <p>One of the richest concepts in Transmodel is <b>routes</b>. To explain this, this diagram shows how the information on a route is represented. As it appeared in the previous diagram, a journey pattern <a href="#http://w3id.org/transmodel/journeys#JourneyPattern">tmjourney:JourneyPattern</a> works in a Route <a href="#http://w3id.org/transmodel/journeys#Route">tmjourney:Route</a>. But in addition, both classes are subclasses of a sequence of links <a href="#http://w3id.org/transmodel/journeys#LinkSequence">tmjourney:LinkSequence</a>.</p>
     <p>The <a href="#http://w3id.org/transmodel/journeys#LinkSequence">tmjourney:LinkSequence</a> are made up of <a href="#http://w3id.org/transmodel/journeys#madeUpOf">tmjourney:madeUpOf</a> points in link sequences <a href="#http://w3id.org/transmodel/journeys#PointInLinkSequence">tmjourney:PointInLinkSequence</a>, that can be viewed as <a href="#http://w3id.org/transmodel/journeys#viewedAs">tmjourney:viewedAs</a> points <a href="#http://w3id.org/transmodel/journeys#Point">tmjourney:Point</a>, which are functional centroid for a zone <a href="#http://w3id.org/transmodel/commons#Zone">tmcommons:Zone</a>, class of which will be subclass <a href="#http://w3id.org/transmodel/commons#Place">tmcommons:Place</a> of which is subclass itself the created class for a Stop <a href="#Parada">esautob:Parada</a>.</p>
     <p>On each side of this trunk line the route relations are developed <a href="#http://w3id.org/transmodel/journeys#Route">tmjourney:Route</a>, with Poin on Route <a href="#http://w3id.org/transmodel/journeys#PointOnRoute">tmjourney:PointOnRoute</a> and Route Point <a href="#http://w3id.org/transmodel/journeys#RoutePoint">tmjourney:RoutePoint</a> on one side and Stop Point In Journey Pattern <a href="#http://w3id.org/transmodel/journeys#StopPointInJourneyPattern">tmjourney:StopPointInJourneyPattern</a> and Scheduled Stop Point <a href="#http://w3id.org/transmodel/journeys#ScheduledStopPoint">tmjourney:ScheduledStopPoint</a> on the other side.</p>
     
@@ -677,8 +677,7 @@ This vocabulary has been developed in the context of the action on open data of 
     <p>Each one is composed of <a href="http://w3id.org/transmodel/journeys#composedOf">tmjourney:composedOf</a> of a group of headway journey group <a href="http://w3id.org/transmodel/journeys#HeadwayJourneyGroup">tmjourney:HeadwayJourneyGroup</a> that is determined by <a href="http://w3id.org/transmodel/journeys#determinedBy">tmjourney:determinedBy</a> a headway interval <a href="http://w3id.org/transmodel/journeys#HeadwayInterval">tmjourney:HeadwayInterval</a>. Each one worked on <a href="http://w3id.org/transmodel/journeys#workedOn">tmjourney:workedOn</a> a day type <a href="http://w3id.org/transmodel/journeys#DayType">tmjourney:DayType</a>.</p>
     <p>Finally, a service calendar <a href="http://w3id.org/transmodel/journeys#ServiceCalendar">tmjourney:ServiceCalendar</a> sets a starting date <a href="http://w3id.org/transmodel/journeys#from">tmjourney:from</a> and an ending date <a href="http://w3id.org/transmodel/journeys#to">tmjourney:to</a> and it is defined by <a href="http://w3id.org/transmodel/journeys#definedBy">tmjourney:definedBy</a> a day type assignation <a href="http://w3id.org/transmodel/journeys#DayTypeAssignment">tmjourney:DayTypeAssignment</a> that sets a date <a href="http://w3id.org/transmodel/journeys#date">tmjourney:date</a> and specifies a day type <a href="http://w3id.org/transmodel/journeys#DayType">tmjourney:DayType</a>.</p>
     
-    <div><center><img src="resources/images/vehicle-journey.png" alt="VehicleJourney,
-    HeadwayInterval, DayType, CalendarService and DayTypeAssignment"/><figcaption>Figure 6. - VehicleJourney,
+    <div><center><img src="resources/images/vehicle-journey.png" alt="VehicleJourney, HeadwayInterval, DayType, CalendarService and DayTypeAssignment"/><figcaption>Figure 6. - VehicleJourney,
     HeadwayInterval, DayType, CalendarService and DayTypeAssignment</figcaption></center></div>
   </div>
   <!-- fin vehicle-journey -->
@@ -1069,7 +1068,7 @@ This vocabulary has been developed in the context of the action on open data of 
    
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Vocabulary for the representation of data on public transport by bus. classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for classes, properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>This section provides details for each class and property defined by Vocabulary for the representation of data on public transport by bus.<p>
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
